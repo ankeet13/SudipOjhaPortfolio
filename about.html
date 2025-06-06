@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About | Sudip Ojha</title>
+  
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- AOS Animations -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+</head>
+<body>
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="spinner"></div>
+  </div>
+  
+
+  <!-- Dark Mode Toggle -->
+  <button class="dark-toggle" onclick="toggleDarkMode()">🌓</button>
+
+  <!-- Navbar -->
+  <nav class="navbar" data-aos="fade-down">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- About Section -->
+  <main>
+    <section class="section" data-aos="fade-up">
+      <h2>👋 About Me</h2>
+      <p>Hi, I’m <strong>Sudip Ojha</strong> — a passionate IT Support Officer based in North Willoughby, Sydney. Currently working at <strong>Sunblest Pty Ltd</strong> while completing my Bachelor's in Information Technology (Victoria University, June 2025).</p>
+      <p>I specialize in IT support, Active Directory, networking, and developing software systems in C#, Java, Python, and Web technologies.</p>
+      <p>My long-term goal is to build a global multi-service company delivering IT, engineering, and digital services.</p>
+      <a href="resume.pdf" class="btn" target="_blank">📄 Download My Resume</a>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section" data-aos="fade-up">
+      <h2>💻 Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-card">Microsoft 365 & Azure</div>
+        <div class="skill-card">Windows & Linux Systems</div>
+        <div class="skill-card">Active Directory & Group Policy</div>
+        <div class="skill-card">Network Troubleshooting (Cisco, VLAN, DNS, DHCP)</div>
+        <div class="skill-card">ASP.NET Core MVC & C#</div>
+        <div class="skill-card">Java & Java Swing</div>
+        <div class="skill-card">Python Scripting</div>
+        <div class="skill-card">SQL Server & EF Core</div>
+        <div class="skill-card">Cybersecurity Fundamentals</div>
+        <div class="skill-card">HTML, CSS, JavaScript</div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Sudip Ojha | Built with ❤️ using VS Code</p>
+    <div class="footer-socials">
+      <a href="mailto:ankeet.ankeet13@gmail.com" target="_blank">
+        <img src="assets/icons/email.png" alt="Email" />
+      </a>
+      <a href="https://linkedin.com/in/sudip-ojha" target="_blank">
+        <img src="assets/icons/linkedin.png" alt="LinkedIn" />
+      </a>
+      <a href="tel:+61457949567">
+        <img src="assets/icons/phone.png" alt="Phone" />
+      </a>
+    </div>
+  </footer>
+  
+
+  <!-- Floating Hire Me Button -->
+  <a href="contact.html" class="floating-button">Hire Me</a>
+
+  <!-- JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="js/script.js"></script>
+  <script>AOS.init();</script>
+  <!-- Scroll To Top Button -->
+  <button onclick="scrollToTop()" id="scrollTopBtn" title="Go to top">⬆️</button>
+
+</body>
+</html>

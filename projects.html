@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Projects | Sudip Ojha</title>
+  
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- AOS Animations -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+</head>
+<body>
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="spinner"></div>
+  </div>
+  
+
+  <!-- Dark Mode Toggle -->
+  <button class="dark-toggle" onclick="toggleDarkMode()">🌓</button>
+
+  <!-- Navbar -->
+  <nav class="navbar" data-aos="fade-down">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html" class="active">Projects</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Projects Section -->
+  <main>
+    <section class="section" data-aos="fade-up">
+      <h2>🚀 My Projects</h2>
+      <div class="projects-grid">
+
+        <div class="project-card">
+          <h3>Connectify</h3>
+          <p>Social networking platform built with Wix + JS, featuring real-time feeds and admin tools.</p>
+          
+        </div>
+
+        <div class="project-card">
+          <h3>QuTech Admin Portal</h3>
+          <p>ASP.NET Core system with login, CRUD, EF Core and audit logging.</p>
+          
+        </div>
+
+        <div class="project-card">
+          <h3>Flight Info System</h3>
+          <p>Java Swing GUI with filtering, sorting and OOP structure.</p>
+          
+        </div>
+
+        <div class="project-card">
+          <h3>QuTech CLI</h3>
+          <p>C# console app simulating a SaaS billing system with user menu and pricing logic.</p>
+          
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Sudip Ojha | Built with ❤️ using VS Code</p>
+    <div class="footer-socials">
+      <a href="mailto:ankeet.ankeet13@gmail.com" target="_blank">
+        <img src="assets/icons/email.png" alt="Email" />
+      </a>
+      <a href="https://linkedin.com/in/sudip-ojha" target="_blank">
+        <img src="assets/icons/linkedin.png" alt="LinkedIn" />
+      </a>
+      <a href="tel:+61457949567">
+        <img src="assets/icons/phone.png" alt="Phone" />
+      </a>
+    </div>
+  </footer>
+  
+
+  <!-- Floating Hire Me Button -->
+  <a href="contact.html" class="floating-button">Hire Me</a>
+
+  <!-- JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="js/script.js"></script>
+  <script>AOS.init();</script>
+  <!-- Scroll To Top Button -->
+  <button onclick="scrollToTop()" id="scrollTopBtn" title="Go to top">⬆️</button>
+
+</body>
+</html>

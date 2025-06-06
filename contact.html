@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact | Sudip Ojha</title>
+  
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- AOS Animations -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+</head>
+<body>
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="spinner"></div>
+  </div>
+  
+
+  <!-- Dark Mode Toggle -->
+  <button class="dark-toggle" onclick="toggleDarkMode()">🌓</button>
+
+  <!-- Navbar -->
+  <nav class="navbar" data-aos="fade-down">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Contact Section -->
+  <main>
+    <section class="section" data-aos="fade-up">
+      <h2>📬 Contact Me</h2>
+      <p style="text-align:center; margin-bottom:1rem;">Feel free to connect with me via the icons below:</p>
+
+      <div class="contact-icons">
+
+        <a href="mailto:ankeet.ankeet13@gmail.com" target="_blank" class="contact-icon" title="Email">
+          <img src="assets/icons/email.png" alt="Email Icon">
+        </a>
+
+        <a href="https://linkedin.com/in/sudip-ojha" target="_blank" class="contact-icon" title="LinkedIn">
+          <img src="assets/icons/linkedin.png" alt="LinkedIn Icon">
+        </a>
+
+        <a href="tel:+61457949567" class="contact-icon" title="Phone">
+          <img src="assets/icons/phone.png" alt="Phone Icon">
+        </a>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Sudip Ojha | Built with ❤️ using VS Code</p>
+    <div class="footer-socials">
+      <a href="mailto:ankeet.ankeet13@gmail.com" target="_blank">
+        <img src="assets/icons/email.png" alt="Email" />
+      </a>
+      <a href="https://linkedin.com/in/sudip-ojha" target="_blank">
+        <img src="assets/icons/linkedin.png" alt="LinkedIn" />
+      </a>
+      <a href="tel:+61457949567">
+        <img src="assets/icons/phone.png" alt="Phone" />
+      </a>
+    </div>
+  </footer>
+  
+
+  <!-- Floating Hire Me Button -->
+  <a href="contact.html" class="floating-button">Hire Me</a>
+
+  <!-- JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="js/script.js"></script>
+  <script>AOS.init();</script>
+  <!-- Scroll To Top Button -->
+  <button onclick="scrollToTop()" id="scrollTopBtn" title="Go to top">⬆️</button>
+
+</body>
+</html>

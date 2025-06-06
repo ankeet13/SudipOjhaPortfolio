@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sudip Ojha | Portfolio</title>
+  
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Animate on Scroll (AOS) -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="assets/icons/favicon.png" />
+
+</head>
+<body>
+
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="spinner"></div>
+  </div>
+
+
+  <!-- Dark Mode Toggle -->
+  <button class="dark-toggle" onclick="toggleDarkMode()">🌓</button>
+
+  <!-- Header / Hero -->
+  <header class="header" data-aos="fade-down">
+    <h1>Hello, I'm <span class="highlight">Sudip Ojha</span></h1>
+    <p>IT Support Officer | Software Engineer in Progress | Entrepreneur</p>
+    <a href="about.html" class="btn">Learn More About Me</a>
+  </header>
+
+  <!-- Navbar -->
+  <nav class="navbar" data-aos="fade-up">
+    <ul>
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <main>
+    <section class="section intro" data-aos="fade-up">
+      <h2>🚀 Welcome to my Portfolio</h2>
+      <p>I am a passionate IT professional currently working as an IT Support Officer at Sunblest Pty Ltd. I am also pursuing my Bachelor's in Information Technology and building innovative projects in my free time.</p>
+      <p>My goal is to become a top software engineer and build Ojha Group — a global multi-service company delivering IT, engineering, and more.</p>
+      <a href="projects.html" class="btn">View My Projects</a>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Sudip Ojha | Built with ❤️ using VS Code</p>
+    <div class="footer-socials">
+      <a href="mailto:ankeet.ankeet13@gmail.com" target="_blank">
+        <img src="assets/icons/email.png" alt="Email" />
+      </a>
+      <a href="https://linkedin.com/in/sudip-ojha" target="_blank">
+        <img src="assets/icons/linkedin.png" alt="LinkedIn" />
+      </a>
+      <a href="tel:+61457949567">
+        <img src="assets/icons/phone.png" alt="Phone" />
+      </a>
+    </div>
+  </footer>
+  
+
+  <!-- Floating Hire Me Button -->
+  <a href="contact.html" class="floating-button">Hire Me</a>
+
+  <!-- JS Files -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="js/script.js"></script>
+  <script>AOS.init();</script>
+  <!-- Scroll To Top Button -->
+  <button onclick="scrollToTop()" id="scrollTopBtn" title="Go to top">⬆️</button>
+
+</body>
+</html>

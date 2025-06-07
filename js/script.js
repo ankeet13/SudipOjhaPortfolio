@@ -1,45 +1,63 @@
-// Toggle Dark Mode
-function toggleDarkMode() {
-  document.body.classList.toggle('dark-mode');
-  // Save preference to localStorage
-  localStorage.setItem('darkMode', document.body.classList.contains('dark-mode'));
-}
+// Script.js → enhance site interactivity
 
-// On page load → apply saved Dark Mode preference
-window.onload = function () {
-  const darkPref = localStorage.getItem('darkMode') === 'true';
-  if (darkPref) {
-    document.body.classList.add('dark-mode');
-  }
-};
+// Fade in elements on scroll
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('fade-in-visible');
+    }
+  });
+}, {
+  threshold: 0.1
+});
 
-// Scroll To Top
-window.onscroll = function() {scrollFunction()};
+document.querySelectorAll('.fade-in').forEach(element => {
+  observer.observe(element);
+});
 
-function scrollFunction() {
-  const btn = document.getElementById("scrollTopBtn");
-  if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-    btn.style.display = "block";
+// Navbar background on scroll
+const navbar = document.querySelector('.navbar');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 50) {
+    navbar.classList.add('scrolled');
   } else {
-    btn.style.display = "none";
+    navbar.classList.remove('scrolled');
   }
-}
+});
 
-function scrollToTop() {
+// Back to Top Button
+const backToTopButton = document.getElementById('backToTop');
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 200) {
+    backToTopButton.style.display = 'block';
+  } else {
+    backToTopButton.style.display = 'none';
+  }
+});
+
+backToTopButton.addEventListener('click', () => {
   window.scrollTo({
     top: 0,
     behavior: 'smooth'
   });
-}
-
-
-// Page Transition Animation
-window.addEventListener('DOMContentLoaded', () => {
-  document.body.classList.add('loaded');
 });
 
-// Preloader
-window.addEventListener("load", function(){
-  const preloader = document.getElementById("preloader");
-  preloader.style.display = "none";
+// Future Enhancements:
+// - Parallax scroll
+// - Light/dark mode toggle
+
+
+// Wait until DOM is fully loaded
+document.addEventListener("DOMContentLoaded", () => {
+
+  // Dark Mode Toggle
+  const darkModeToggle = document.getElementById('darkModeToggle');
+  darkModeToggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+  });
+
 });
+
+// - Smooth anchor scrolling (already handled by CSS scroll-behavior)
+// - Lottie animations / more interactive elements

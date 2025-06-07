@@ -32,13 +32,13 @@ a:hover {
 
 /* Navbar */
 .navbar {
-  background-color: rgba(255,255,255,0.9);
+  background-color: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid #ddd;
   position: fixed;
   top: 0;
   width: 100%;
-  padding: 1rem 0;
+  padding: 0.8rem 0;
   z-index: 1000;
   transition: background-color 0.3s ease;
 }
@@ -49,14 +49,35 @@ a:hover {
   align-items: center;
 }
 
-.navbar .logo {
-  font-size: 1.5rem;
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.logo img {
+  height: 40px;
+  width: auto;
+  display: block;
+}
+
+.logo span {
   font-weight: bold;
+  font-size: 1.2rem;
 }
 
 .nav-links {
   display: flex;
   gap: 1.5rem;
+}
+
+.nav-links a {
+  font-weight: 500;
+  position: relative;
+  text-decoration: none;
+  color: #222;
 }
 
 .nav-links a.active::after,
@@ -68,6 +89,19 @@ a:hover {
   background: #c9a24a;
   margin-top: 4px;
 }
+
+/* Optional: Mobile responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    gap: 1rem;
+    font-size: 0.95rem;
+  }
+
+  .logo span {
+    font-size: 1rem;
+  }
+}
+
 
 /* Hero */
 .hero {
@@ -334,3 +368,15 @@ body.dark-mode footer {
     transform: translateY(-10px);
   }
 }
+
+.logo img {
+  height: 40px;
+  width: auto;
+  display: block;
+}
+
+.logo span {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+

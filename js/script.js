@@ -59,5 +59,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
-// - Smooth anchor scrolling (already handled by CSS scroll-behavior)
-// - Lottie animations / more interactive elements
+// Dashboard dropdown toggle
+document.getElementById('dashboardToggle').addEventListener('click', function() {
+  document.getElementById('dashboardDropdown').classList.toggle('show');
+});
+
+// Optional: close dropdown when clicking outside
+window.addEventListener('click', function(e) {
+  if (!document.querySelector('.dashboard-menu').contains(e.target)) {
+    document.getElementById('dashboardDropdown').classList.remove('show');
+  }
+});

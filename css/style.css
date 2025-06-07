@@ -68,27 +68,75 @@ a:hover {
   font-size: 1.2rem;
 }
 
-.nav-links {
-  display: flex;
-  gap: 1.5rem;
-}
-
-.nav-links a {
-  font-weight: 500;
+/* Dashboard Menu */
+.dashboard-menu {
   position: relative;
-  text-decoration: none;
-  color: #222;
 }
 
-.nav-links a.active::after,
-.nav-links a:hover::after {
-  content: '';
-  display: block;
-  width: 100%;
-  height: 2px;
-  background: #c9a24a;
-  margin-top: 4px;
+#dashboardToggle {
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  color: #222;
+  transition: transform 0.3s ease;
 }
+
+#dashboardToggle:hover {
+  transform: scale(1.1);
+}
+
+.dashboard-dropdown {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  padding: 1rem;
+  z-index: 1001;
+  min-width: 180px;
+}
+
+.dashboard-dropdown a {
+  display: block;
+  padding: 0.6rem 1rem;
+  color: #222;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.dashboard-dropdown a:hover {
+  background-color: #f0f0f0;
+}
+
+/* Show menu when active */
+.dashboard-dropdown.show {
+  display: block;
+}
+
+/* Dark Mode Support */
+body.dark-mode #dashboardToggle {
+  color: #eee;
+}
+
+body.dark-mode .dashboard-dropdown {
+  background-color: #222;
+  border: 1px solid #444;
+}
+
+body.dark-mode .dashboard-dropdown a {
+  color: #ddd;
+}
+
+body.dark-mode .dashboard-dropdown a:hover {
+  background-color: #333;
+}
+
 
 /* Optional: Mobile responsive */
 @media (max-width: 768px) {

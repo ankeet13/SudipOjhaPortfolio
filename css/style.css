@@ -41,14 +41,17 @@ a:hover {
   padding: 0.8rem 0;
   z-index: 1000;
   transition: background-color 0.3s ease;
+  overflow: visible; /* VERY IMPORTANT → allow dropdown to show */
 }
 
 .navbar .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  overflow: visible; /* already correct */
 }
 
+/* Logo */
 .logo {
   display: flex;
   align-items: center;
@@ -71,6 +74,7 @@ a:hover {
 /* Dashboard Menu */
 .dashboard-menu {
   position: relative;
+  z-index: 1100; /* ensures dropdown is above navbar */
 }
 
 #dashboardToggle {
@@ -96,9 +100,18 @@ a:hover {
   border: 1px solid #ddd;
   border-radius: 8px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-  padding: 1rem;
-  z-index: 1001;
-  min-width: 180px;
+  padding: 1.2rem;
+  z-index: 1100;
+  min-width: 200px;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.dashboard-dropdown.show {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .dashboard-dropdown a {
@@ -112,11 +125,6 @@ a:hover {
 
 .dashboard-dropdown a:hover {
   background-color: #f0f0f0;
-}
-
-/* Show menu when active */
-.dashboard-dropdown.show {
-  display: block;
 }
 
 /* Dark Mode Support */
@@ -137,19 +145,23 @@ body.dark-mode .dashboard-dropdown a:hover {
   background-color: #333;
 }
 
-
-/* Optional: Mobile responsive */
+/* Mobile Responsive fix */
 @media (max-width: 768px) {
-  .nav-links {
-    gap: 1rem;
-    font-size: 0.95rem;
+  .dashboard-dropdown {
+    right: 10px;
+    left: 10px;
+    width: auto;
+  }
+
+  #dashboardToggle {
+    font-size: 2rem;
+    padding: 0.5rem 1rem;
   }
 
   .logo span {
     font-size: 1rem;
   }
 }
-
 
 /* Hero */
 .hero {
@@ -233,6 +245,50 @@ body.dark-mode .dashboard-dropdown a:hover {
   box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 }
 
+/* Projects Horizontal Strip */
+.projects-strip {
+  display: flex;
+  overflow-x: auto;
+  gap: 2rem;
+  padding: 2rem 0;
+  scroll-snap-type: x mandatory;
+}
+
+.project-card {
+  flex: 0 0 300px;
+  scroll-snap-align: start;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* Contact Icons */
+.contact-icons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.contact-icons img {
+  width: 60px;
+  height: 60px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.contact-icons img:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+
 /* Footer */
 footer {
   background: #fff;
@@ -270,71 +326,6 @@ footer {
   transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
-/* Projects Horizontal Strip */
-.projects-strip {
-  display: flex;
-  overflow-x: auto;
-  gap: 2rem;
-  padding: 2rem 0;
-  scroll-snap-type: x mandatory;
-}
-
-.project-card {
-  flex: 0 0 300px;
-  scroll-snap-align: start;
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 1.5rem;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.project-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-}
-
-.services-grid {
-  display: grid;
-  gap: 2rem;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-}
-
-.service-card {
-  background: #fff;
-  border: 1px solid #ddd;
-  padding: 1.5rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.service-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-}
-
-
-/* Contact Icons */
-.contact-icons {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  margin-top: 2rem;
-}
-
-.contact-icons img {
-  width: 60px;
-  height: 60px;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
-.contact-icons img:hover {
-  transform: scale(1.1);
-  opacity: 0.8;
-}
-
 /* Dark Mode */
 body.dark-mode {
   background-color: #111;
@@ -363,6 +354,7 @@ body.dark-mode footer {
   color: #aaa;
 }
 
+/* Dark mode toggle */
 #darkModeToggle {
   background: none;
   border: none;
@@ -399,6 +391,7 @@ body.dark-mode footer {
   color: #fff;
 }
 
+/* Logo fade in */
 .logo {
   font-size: 1.5rem;
   font-weight: bold;
@@ -416,15 +409,3 @@ body.dark-mode footer {
     transform: translateY(-10px);
   }
 }
-
-.logo img {
-  height: 40px;
-  width: auto;
-  display: block;
-}
-
-.logo span {
-  font-weight: bold;
-  font-size: 1.2rem;
-}
-

@@ -1,6 +1,6 @@
 // Script.js → enhance site interactivity
 
-// Fade in elements on scroll
+// 1️⃣ Fade in elements on scroll
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -15,7 +15,7 @@ document.querySelectorAll('.fade-in').forEach(element => {
   observer.observe(element);
 });
 
-// Navbar background on scroll
+// 2️⃣ Navbar background on scroll
 const navbar = document.querySelector('.navbar');
 window.addEventListener('scroll', () => {
   if (window.scrollY > 50) {
@@ -25,48 +25,58 @@ window.addEventListener('scroll', () => {
   }
 });
 
-// Back to Top Button
+// 3️⃣ Back to Top Button (safe version)
 const backToTopButton = document.getElementById('backToTop');
 
 window.addEventListener('scroll', () => {
-  if (window.scrollY > 200) {
-    backToTopButton.style.display = 'block';
-  } else {
-    backToTopButton.style.display = 'none';
+  if (backToTopButton) {
+    if (window.scrollY > 200) {
+      backToTopButton.style.display = 'block';
+    } else {
+      backToTopButton.style.display = 'none';
+    }
   }
 });
 
-backToTopButton.addEventListener('click', () => {
-  window.scrollTo({
-    top: 0,
-    behavior: 'smooth'
+if (backToTopButton) {
+  backToTopButton.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
   });
-});
+}
 
-// Future Enhancements:
-// - Parallax scroll
-// - Light/dark mode toggle
-
-
-// Wait until DOM is fully loaded
+// 4️⃣ Wait until DOM is fully loaded
 document.addEventListener("DOMContentLoaded", () => {
+  console.log("DOM fully loaded"); // TEST → should appear
 
-  // Dark Mode Toggle
+  // 4a️⃣ Dark Mode Toggle
   const darkModeToggle = document.getElementById('darkModeToggle');
-  darkModeToggle.addEventListener('click', () => {
-    document.body.classList.toggle('dark-mode');
-  });
+  if (darkModeToggle) {
+    darkModeToggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+    });
+  }
 
-});
+  // 4b️⃣ Dashboard dropdown toggle
+  const dashboardToggle = document.getElementById('dashboardToggle');
+  const dashboardDropdown = document.getElementById('dashboardDropdown');
 
-// Dashboard dropdown toggle
-document.getElementById('dashboardToggle').addEventListener('click', function() {
-  document.getElementById('dashboardDropdown').classList.toggle('show');
-});
+  if (dashboardToggle && dashboardDropdown) {
+    dashboardToggle.addEventListener('click', function (e) {
+      console.log("Dashboard clicked"); // TEST → should appear
+      dashboardDropdown.classList.toggle('show');
+      e.stopPropagation(); // prevent outside click from closing immediately
+    });
 
-// Optional: close dropdown when clicking outside
-window.addEventListener('click', function(e) {
-  if (!document.querySelector('.dashboard-menu').contains(e.target)) {
-    document.getElementById('dashboardDropdown').classList.remove('show');
+    // Close dropdown when clicking outside
+    window.addEventListener('click', function (e) {
+      if (!document.querySelector('.dashboard-menu').contains(e.target)) {
+        dashboardDropdown.classList.remove('show');
+      }
+    });
+  } else {
+    console.log("Dashboard elements not found"); // helpful debug
   }
 });

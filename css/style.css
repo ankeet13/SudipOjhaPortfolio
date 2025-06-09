@@ -146,20 +146,17 @@ body.dark-mode .dashboard-dropdown a:hover {
 }
 
 /* Mobile Responsive fix */
-@media (max-width: 768px) {
-  .dashboard-dropdown {
-    right: 10px;
-    left: 10px;
-    width: auto;
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 2rem; /* smaller on mobile */
   }
 
-  #dashboardToggle {
-    font-size: 2rem;
-    padding: 0.5rem 1rem;
-  }
-
-  .logo span {
+  .hero p {
     font-size: 1rem;
+  }
+
+  .hero {
+    padding: 1.2rem; /* less padding so content fits nicely */
   }
 }
 

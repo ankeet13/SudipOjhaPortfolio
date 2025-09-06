@@ -1,31 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Contact | Sudip Ojha</title>
 
-  <!-- SEO Meta Tags -->
-  <meta name="description" content="Contact Sudip Ojha for professional IT services, consulting, and collaborations.">
-  <meta name="keywords" content="Contact, Sudip Ojha, IT Consulting, Business Inquiries, Professional Services">
-  <meta name="author" content="Sudip Ojha">
+  <meta name="description" content="Get in touch for IT support, software development, cybersecurity and cloud projects.">
+  <meta property="og:title" content="Contact — Sudip Ojha">
+  <meta property="og:description" content="Let’s connect — Email, LinkedIn or Phone.">
+  <meta property="og:image" content="https://sudipojha.com/assets/images/og-image.png">
+  <meta property="og:url" content="https://sudipojha.com/contact.html">
+  <meta property="og:type" content="website">
 
-  <!-- Styles -->
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preload" as="image" href="assets/images/og-image.png">
+  <link rel="stylesheet" href="css/style.css"/>
+  <script defer src="js/script.js"></script>
+
+  <style>
+    .contact-icons {
+      display:flex;gap:24px;justify-content:center;align-items:center;margin-top:28px;
+    }
+    .contact-icons a {
+      display:inline-flex;align-items:center;justify-content:center;
+      width:60px;height:60px;border-radius:16px;
+      background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02));
+      border:1px solid var(--line);box-shadow:var(--shadow);
+      transition:transform .25s ease, background .25s ease, color .25s ease;
+      color:var(--text);
+    }
+    .contact-icons a:hover {transform:translateY(-3px);background:rgba(56,189,248,.08);color:var(--accent);}
+    .contact-icons svg {width:28px;height:28px;display:block;}
+  </style>
 </head>
-<body class="theme-green">
+<body>
+  <!-- Splash -->
+  <div id="splash" class="hidden" aria-hidden="true">
+    <div class="logo-wrap"><img src="assets/images/og-image.png" alt="Sudip Ojha Logo"></div>
+  </div>
 
   <!-- Navbar -->
   <nav class="navbar">
     <div class="container">
       <a href="index.html#hero" class="logo">
-        <img src="assets/images/og-image.png" alt="SudipOjha Logo">
-        <span>Sudip Ojha</span>
+        <img src="assets/images/og-image.png" alt="SO"><span>Sudip Ojha</span>
       </a>
-
-      <!-- Dashboard Menu -->
       <div class="dashboard-menu">
-        <button id="dashboardToggle" role="button" aria-expanded="false">☰</button>
+        <button id="dashboardToggle" aria-expanded="false">☰</button>
         <div id="dashboardDropdown" class="dashboard-dropdown">
           <a href="index.html#hero">Home</a>
           <a href="index.html#about">About</a>
@@ -37,47 +57,41 @@
     </div>
   </nav>
 
-  <!-- Contact Section -->
-  <section class="section fade-in">
+  <!-- Contact -->
+  <section class="section" style="padding-top:120px;text-align:center">
     <div class="container">
       <h2>Contact</h2>
-      <p>To discuss a project, collaboration, or service inquiry, feel free to reach out via the following channels:</p>
+      <p class="lead">Let’s connect — reach out directly through any channel below.</p>
 
       <div class="contact-icons">
-        <a href="mailto:ankeet.ankeet13@gmail.com" target="_blank" title="Email">
-          <img src="assets/icons/email.png" alt="Email Icon">
+        <!-- Email -->
+        <a href="mailto:ankee.ankeet13@gmail.com" title="Email">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="5" width="18" height="14" rx="2" ry="2"/>
+            <path d="m3 7 9 6 9-6"/>
+          </svg>
         </a>
-        <a href="https://linkedin.com/in/sudip-ojha" target="_blank" title="LinkedIn">
-          <img src="assets/icons/linkedin.png" alt="LinkedIn Icon">
+
+        <!-- LinkedIn -->
+        <a href="https://linkedin.com/in/sudip-ojha" target="_blank" rel="noopener" title="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M4.98 3.5a2.5 2.5 0 1 1 0 5.001 2.5 2.5 0 0 1 0-5.001ZM3.5 9h3v12h-3V9Zm6 0h2.86v1.64h.04C13 9.62 14.7 8.8 16.8 8.8c3.33 0 4.2 2.03 4.2 4.67V21h-3v-6.2c0-1.48-.03-3.39-2.06-3.39-2.06 0-2.38 1.6-2.38 3.28V21h-3V9Z"/>
+          </svg>
         </a>
+
+        <!-- Phone -->
         <a href="tel:+61457949567" title="Phone">
-          <img src="assets/icons/phone.png" alt="Phone Icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 16.92v2a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.08 4.18 2 2 0 0 1 4.06 2h2a2 2 0 0 1 2 1.72c.12.9.33 1.77.62 2.61a2 2 0 0 1-.45 2.11L7.1 9.9a16 16 0 0 0 6 6l1.46-1.17a2 2 0 0 1 2.11-.45c.84.29 1.71.5 2.61.62A2 2 0 0 1 22 16.92z"/>
+          </svg>
         </a>
       </div>
-
-      <p style="margin-top:2rem; font-size:1.05rem;">Alternatively, connect with me on LinkedIn for business discussions.</p>
     </div>
   </section>
 
-  <!-- Footer / Contact -->
-  <footer class="fade-in">
-    <div class="container">
-      <p>Let’s work together. <a href="mailto:ankeet.ankeet13@gmail.com">Email me</a> or connect on <a href="https://linkedin.com/in/sudip-ojha" target="_blank">LinkedIn</a>.</p>
-      <p>&copy; 2025 Sudip Ojha. All rights reserved.</p>
-    </div>
+  <footer>
+    <div class="container">© <span id="year"></span> Sudip Ojha</div>
   </footer>
-
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JRPN558YRM"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-JRPN558YRM');
-  </script>
-
-  <!-- Scripts -->
-  <script src="js/script.js"></script>
-  <button id="backToTop" title="Back to Top">↑</button>
+  <script>document.getElementById('year').textContent=new Date().getFullYear()</script>
 </body>
 </html>

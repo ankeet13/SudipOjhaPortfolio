@@ -1,31 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Services | Sudip Ojha</title>
 
-  <!-- SEO Meta Tags -->
-  <meta name="description" content="Professional IT services provided by Sudip Ojha: Managed IT, Software Development, Cybersecurity, Infrastructure, Freelance Projects.">
-  <meta name="keywords" content="IT Services, Managed IT, MSP, Software Development, Cybersecurity, Infrastructure, Freelance IT">
-  <meta name="author" content="Sudip Ojha">
-
-  <!-- Styles -->
-  <link rel="stylesheet" href="css/style.css" />
+  <meta name="description" content="Professional IT services by Sudip Ojha: Managed IT, Cybersecurity, Software Development, Cloud & Infrastructure, Automation & Consulting.">
+  <link rel="preload" as="image" href="assets/images/og-image.png">
+  <link rel="stylesheet" href="css/style.css"/>
+  <script defer src="js/script.js"></script>
 </head>
-<body class="theme-green">
+<body>
+
+  <!-- Splash / Logo Overlay -->
+  <div id="splash" class="hidden" aria-hidden="true">
+    <div class="logo-wrap">
+      <img src="assets/images/og-image.png" alt="Sudip Ojha Logo">
+    </div>
+  </div>
 
   <!-- Navbar -->
   <nav class="navbar">
     <div class="container">
       <a href="index.html#hero" class="logo">
-        <img src="assets/images/og-image.png" alt="SudipOjha Logo">
-        <span>Sudip Ojha</span>
+        <img src="assets/images/og-image.png" alt="SO"><span>Sudip Ojha</span>
       </a>
-
-      <!-- Dashboard Menu -->
       <div class="dashboard-menu">
-        <button id="dashboardToggle" role="button" aria-expanded="false">☰</button>
+        <button id="dashboardToggle" aria-expanded="false">☰</button>
         <div id="dashboardDropdown" class="dashboard-dropdown">
           <a href="index.html#hero">Home</a>
           <a href="index.html#about">About</a>
@@ -37,56 +38,80 @@
     </div>
   </nav>
 
-  <!-- Services Section -->
-  <section class="section fade-in">
+  <!-- Services -->
+  <section class="section" style="padding-top:120px">
     <div class="container">
-      <h2>Professional Services</h2>
-      <p>Comprehensive IT services designed to drive business success through technology.</p>
+      <h2>Services</h2>
+      <p class="lead">End-to-end IT solutions tailored for small businesses and startups.</p>
 
-      <div class="services-grid">
-        <div class="service-card">
+      <div class="grid cols-3" style="margin-top:20px">
+        <article class="card">
           <h3>Managed IT Services (MSP)</h3>
-          <p>End-to-end IT management, monitoring, support, and strategy to ensure operational excellence.</p>
-        </div>
-        <div class="service-card">
+          <p class="lead">Monitoring, patching, backup & recovery, endpoint security, helpdesk, licensing.</p>
+          <div class="chips"><span class="chip">Windows 11</span><span class="chip">M365</span><span class="chip">Backups</span></div>
+        </article>
+
+        <article class="card">
           <h3>Cybersecurity Consulting</h3>
-          <p>Risk assessments, audits, and proactive security solutions to safeguard your business assets.</p>
-        </div>
-        <div class="service-card">
+          <p class="lead">Risk assessments, GPO hardening, recovery drills, incident playbooks, awareness.</p>
+          <div class="chips"><span class="chip">Hardening</span><span class="chip">Audit</span><span class="chip">Training</span></div>
+        </article>
+
+        <article class="card">
           <h3>Custom Software Development</h3>
-          <p>Bespoke application development for web, mobile, and desktop platforms to meet unique business needs.</p>
+          <p class="lead">Web apps and portals built with React, Node/Express, ASP.NET Core, and SQL.</p>
+          <div class="chips"><span class="chip">Auth</span><span class="chip">APIs</span><span class="chip">Dashboards</span></div>
+        </article>
+
+        <article class="card">
+          <h3>IT Infrastructure & Cloud</h3>
+          <p class="lead">AD/RODC, DNS/DHCP, VLANs, server builds, Azure/OCI migration, monitoring.</p>
+          <div class="chips"><span class="chip">Servers</span><span class="chip">Networks</span><span class="chip">Cloud</span></div>
+        </article>
+
+        <article class="card">
+          <h3>Automation & AI</h3>
+          <p class="lead">Python scripts, integrations, agents, and trading-bot R&D with risk controls.</p>
+          <div class="chips"><span class="chip">Python</span><span class="chip">Pandas</span><span class="chip">Alerts</span></div>
+        </article>
+
+        <article class="card">
+          <h3>Freelance / Consulting</h3>
+          <p class="lead">Scoped audits, documentation, and ongoing advisory with clear deliverables.</p>
+          <div class="chips"><span class="chip">Audits</span><span class="chip">Docs</span><span class="chip">SLA</span></div>
+        </article>
+      </div>
+
+      <!-- Packages -->
+      <div class="grid" style="margin-top:28px">
+        <div class="card">
+          <h3>Packages</h3>
+          <div class="grid cols-3" style="margin-top:12px">
+            <div class="card">
+              <strong>Starter – $499</strong>
+              <p class="lead">1–3 pages or basic IT setup: domain/DNS, email, security basics.</p>
+            </div>
+            <div class="card" style="border-color:rgba(56,189,248,.35)">
+              <strong>Growth – $1,499</strong>
+              <p class="lead">5–8 pages or infra uplift, backups/monitoring, deployment & documentation.</p>
+            </div>
+            <div class="card">
+              <strong>Pro – Custom</strong>
+              <p class="lead">Complex apps/networks, CI/CD, observability, security & compliance.</p>
+            </div>
+          </div>
         </div>
-        <div class="service-card">
-          <h3>IT Infrastructure & Cloud Solutions</h3>
-          <p>Network architecture, server optimization, and cloud migration to enable scalable IT environments.</p>
-        </div>
-        <div class="service-card">
-          <h3>Freelance IT Projects & Consulting</h3>
-          <p>Available for project-based engagements, contract work, and IT consulting assignments worldwide.</p>
-        </div>
+      </div>
+
+      <div class="cta-row" style="margin-top:26px">
+        <a href="contact.html" class="btn btn-primary">Get a quote</a>
       </div>
     </div>
   </section>
 
-  <!-- Footer / Contact -->
-  <footer class="fade-in">
-    <div class="container">
-      <p>Let’s work together. <a href="mailto:ankeet.ankeet13@gmail.com">Email me</a> or connect on <a href="https://linkedin.com/in/sudip-ojha" target="_blank">LinkedIn</a>.</p>
-      <p>&copy; 2025 Sudip Ojha. All rights reserved.</p>
-    </div>
+  <footer>
+    <div class="container">© <span id="year"></span> Sudip Ojha</div>
   </footer>
-
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JRPN558YRM"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-JRPN558YRM');
-  </script>
-
-  <!-- Scripts -->
-  <script src="js/script.js"></script>
-  <button id="backToTop" title="Back to Top">↑</button>
+  <script>document.getElementById('year').textContent=new Date().getFullYear()</script>
 </body>
 </html>

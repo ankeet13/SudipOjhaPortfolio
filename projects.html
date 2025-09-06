@@ -1,31 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Projects | Sudip Ojha</title>
 
-  <!-- SEO Meta Tags -->
-  <meta name="description" content="Case studies of IT projects by Sudip Ojha. Managed IT, Software Development, Cybersecurity solutions.">
-  <meta name="keywords" content="IT Projects, Software Development, Managed IT, Case Studies, Cybersecurity">
-  <meta name="author" content="Sudip Ojha">
+  <meta name="description" content="Selected builds and prototypes by Sudip Ojha.">
+  <meta property="og:title" content="Projects — Sudip Ojha">
+  <meta property="og:description" content="Weatherrrrr, Connectify, QuTech Admin Portal, Flight Information System, Digital Clock, Automation & Trading Bots.">
+  <meta property="og:image" content="https://sudipojha.com/assets/images/og-image.png">
+  <meta property="og:url" content="https://sudipojha.com/projects.html">
+  <meta property="og:type" content="website">
 
-  <!-- Styles -->
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preload" as="image" href="assets/images/og-image.png">
+  <link rel="stylesheet" href="css/style.css"/>
+  <script defer src="js/script.js"></script>
 </head>
-<body class="theme-green">
+<body>
+
+  <!-- Splash / Logo Overlay -->
+  <div id="splash" class="hidden" aria-hidden="true">
+    <div class="logo-wrap">
+      <img src="assets/images/og-image.png" alt="Sudip Ojha Logo">
+    </div>
+  </div>
 
   <!-- Navbar -->
   <nav class="navbar">
     <div class="container">
       <a href="index.html#hero" class="logo">
-        <img src="assets/images/og-image.png" alt="SudipOjha Logo">
-        <span>Sudip Ojha</span>
+        <img src="assets/images/og-image.png" alt="SO"><span>Sudip Ojha</span>
       </a>
-
-      <!-- Dashboard Menu -->
       <div class="dashboard-menu">
-        <button id="dashboardToggle" role="button" aria-expanded="false">☰</button>
+        <button id="dashboardToggle" aria-expanded="false">☰</button>
         <div id="dashboardDropdown" class="dashboard-dropdown">
           <a href="index.html#hero">Home</a>
           <a href="index.html#about">About</a>
@@ -37,65 +44,77 @@
     </div>
   </nav>
 
-  <!-- Projects Section -->
-  <section class="section fade-in">
+  <!-- Projects -->
+  <section class="section" style="padding-top:120px">
     <div class="container">
-      <h2>Case Studies</h2>
-      <div class="projects-strip">
+      <h2>Projects</h2>
+      <p class="lead">Selected builds and prototypes.</p>
 
-        <!-- Weatherrrrr Project -->
-        <div class="project-card">
-          <h3>Weatherrrrr 🌦️</h3>
-          <p>A modern weather app providing current weather conditions and a 5-day forecast. Built with HTML, CSS, JavaScript, and OpenWeather API. Live and fully responsive.</p>
-          <a href="https://ankeet13.github.io/Weatherrrrr/" target="_blank" class="project-link">View Live Project →</a>
-        </div>
+      <div class="grid cols-3" style="margin-top:20px">
+        <article class="card">
+          <h3>Weatherrrrr</h3>
+          <p class="lead">Modern weather app with current conditions & forecast (OpenWeather API).</p>
+          <div class="chips">
+            <span class="chip">HTML/CSS</span><span class="chip">JavaScript</span><span class="chip">API</span>
+          </div>
+          <p style="margin-top:10px">
+            <a href="https://ankeet13.github.io/Weatherrrrr/" target="_blank" rel="noopener">Live demo →</a>
+          </p>
+        </article>
 
-        <div class="project-card">
-          <h3>Connectify Social Platform</h3>
-          <p>Designed and developed a social networking platform with secure authentication and real-time features.</p>
-          <p><strong>Impact:</strong> Enabled MVP launch within 3 months.</p>
-        </div>
+        <article class="card">
+          <h3>Connectify (Social)</h3>
+          <p class="lead">MERN-style social platform with secure authentication and real-time features.</p>
+          <div class="chips">
+            <span class="chip">React</span><span class="chip">Node</span><span class="chip">Mongo</span>
+          </div>
+          <!-- <p style="margin-top:10px"><a href="#" target="_blank">Repo/Demo (add) →</a></p> -->
+        </article>
 
-        <div class="project-card">
+        <article class="card">
           <h3>QuTech Admin Portal</h3>
-          <p>Built an ASP.NET Core enterprise portal with subscription management, audit trails, and secure identity-based login.</p>
-          <p><strong>Impact:</strong> Automated manual processes, improving operational efficiency.</p>
-        </div>
+          <p class="lead">ASP.NET Core admin portal with subscriptions, audit trails, and identity-based login.</p>
+          <div class="chips">
+            <span class="chip">ASP.NET</span><span class="chip">EF Core</span><span class="chip">SQL</span>
+          </div>
+          <!-- <p style="margin-top:10px"><a href="#" target="_blank">Case study (add) →</a></p> -->
+        </article>
 
-        <div class="project-card">
+        <article class="card">
           <h3>Flight Information System</h3>
-          <p>Developed Java Swing GUI with advanced filtering and sorting for airline operations data visibility.</p>
-        </div>
+          <p class="lead">Java Swing GUI for airline operations data with filtering and sorting.</p>
+          <div class="chips">
+            <span class="chip">Java</span><span class="chip">Swing</span>
+          </div>
+          <!-- <p style="margin-top:10px"><a href="#" target="_blank">Screens/Repo (add) →</a></p> -->
+        </article>
 
-        <div class="project-card">
+        <article class="card">
           <h3>Digital Clock</h3>
-          <p>Real-time digital clock built using pure JS & CSS — demonstrating dynamic rendering and smooth animations.</p>
-          <a href="https://ankeet13.github.io/DigitalClock/" target="_blank" class="project-link">View Live Project →</a>
-        </div>
+          <p class="lead">Real-time digital clock built with pure JS & CSS and smooth animations.</p>
+          <div class="chips">
+            <span class="chip">JavaScript</span><span class="chip">CSS</span>
+          </div>
+          <p style="margin-top:10px">
+            <a href="https://ankeet13.github.io/DigitalClock/" target="_blank" rel="noopener">Live demo →</a>
+          </p>
+        </article>
 
+        <article class="card">
+          <h3>Automation & Trading Bots (R&D)</h3>
+          <p class="lead">High-risk research prototypes for Binance/Bybit with modular backtesting.</p>
+          <div class="chips">
+            <span class="chip">Python</span><span class="chip">Pandas</span>
+          </div>
+          <!-- <p style="margin-top:10px"><a href="#" target="_blank">Docs/Repo (add) →</a></p> -->
+        </article>
       </div>
     </div>
   </section>
 
-  <!-- Footer / Contact -->
-  <footer class="fade-in">
-    <div class="container">
-      <p>Let’s work together. <a href="mailto:ankeet.ankeet13@gmail.com">Email me</a> or connect on <a href="https://linkedin.com/in/sudip-ojha" target="_blank">LinkedIn</a>.</p>
-      <p>&copy; 2025 Sudip Ojha. All rights reserved.</p>
-    </div>
+  <footer>
+    <div class="container">© <span id="year"></span> Sudip Ojha</div>
   </footer>
-
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JRPN558YRM"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-JRPN558YRM');
-  </script>
-
-  <!-- Scripts -->
-  <script src="js/script.js"></script>
-  <button id="backToTop" title="Back to Top">↑</button>
+  <script>document.getElementById('year').textContent = new Date().getFullYear()</script>
 </body>
 </html>

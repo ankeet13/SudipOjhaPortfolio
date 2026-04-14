@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Projects | Sudip Ojha</title>
 
-  <meta name="description" content="Selected builds and prototypes by Sudip Ojha.">
+  <meta name="description" content="Selected builds and prototypes by Sudip Ojha — web apps, admin portals, automation tools, and more.">
   <meta property="og:title" content="Projects — Sudip Ojha">
   <meta property="og:description" content="Weatherrrrr, Connectify, QuTech Admin Portal, Flight Information System, Digital Clock, Automation & Trading Bots.">
   <meta property="og:image" content="https://sudipojha.com/assets/images/og-image.png">
@@ -18,103 +18,172 @@
 </head>
 <body>
 
-  <!-- Splash / Logo Overlay -->
-  <div id="splash" class="hidden" aria-hidden="true">
-    <div class="logo-wrap">
-      <img src="assets/images/og-image.png" alt="Sudip Ojha Logo">
-    </div>
-  </div>
-
   <!-- Navbar -->
-  <nav class="navbar">
-    <div class="container">
-      <a href="index.html#hero" class="logo">
-        <img src="assets/images/og-image.png" alt="SO"><span>Sudip Ojha</span>
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo">
+        <img src="assets/images/og-image.png" alt="SO logo">
+        <span>Sudip Ojha</span>
       </a>
-      <div class="dashboard-menu">
-        <button id="dashboardToggle" aria-expanded="false">☰</button>
-        <div id="dashboardDropdown" class="dashboard-dropdown">
-          <a href="index.html#hero">Home</a>
-          <a href="index.html#about">About</a>
-          <a href="projects.html">Projects</a>
-          <a href="services.html">Services</a>
-          <a href="contact.html">Contact</a>
-        </div>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="index.html#about" class="nav-link">About</a>
+        <a href="projects.html" class="nav-link">Projects</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="contact.html" class="btn btn-nav">Contact</a>
       </div>
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </nav>
+
+  <!-- Mobile nav drawer -->
+  <div id="navDrawer" class="nav-drawer" aria-hidden="true">
+    <a href="index.html">Home</a>
+    <a href="index.html#about">About</a>
+    <a href="projects.html">Projects</a>
+    <a href="services.html">Services</a>
+    <a href="contact.html" class="cta">Contact →</a>
+  </div>
 
   <!-- Projects -->
   <section class="section" style="padding-top:120px">
     <div class="container">
-      <h2>Projects</h2>
-      <p class="lead">Selected builds and prototypes.</p>
+      <p class="section-label"><span class="dot"></span>Work</p>
+      <h2 class="section-heading reveal">Selected projects</h2>
+      <p class="section-sub reveal reveal-delay-1">A collection of builds ranging from full-stack web apps to automation tools and IT infrastructure.</p>
 
-      <div class="grid cols-3" style="margin-top:20px">
-        <article class="card">
+      <div class="grid cols-3" style="margin-top:48px">
+
+        <!-- Weatherrrrr -->
+        <article class="card project-card reveal reveal-delay-1">
+          <div class="project-thumb thumb-weather">
+            <span class="thumb-label">WX</span>
+          </div>
           <h3>Weatherrrrr</h3>
-          <p class="lead">Modern weather app with current conditions & forecast (OpenWeather API).</p>
+          <p>Modern weather app with real-time current conditions and multi-day forecast powered by the OpenWeather API.</p>
           <div class="chips">
-            <span class="chip">HTML/CSS</span><span class="chip">JavaScript</span><span class="chip">API</span>
+            <span class="chip">HTML/CSS</span>
+            <span class="chip">JavaScript</span>
+            <span class="chip">REST API</span>
           </div>
-          <p style="margin-top:10px">
-            <a href="https://ankeet13.github.io/Weatherrrrr/" target="_blank" rel="noopener">Live demo →</a>
-          </p>
+          <div class="project-footer">
+            <a href="https://ankeet13.github.io/Weatherrrrr/" target="_blank" rel="noopener" class="project-link">
+              Live demo
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <span class="chip">Frontend</span>
+          </div>
         </article>
 
-        <article class="card">
-          <h3>Connectify (Social)</h3>
-          <p class="lead">MERN-style social platform with secure authentication and real-time features.</p>
-          <div class="chips">
-            <span class="chip">React</span><span class="chip">Node</span><span class="chip">Mongo</span>
+        <!-- Connectify -->
+        <article class="card project-card reveal reveal-delay-2">
+          <div class="project-thumb thumb-social">
+            <span class="thumb-label">CO</span>
           </div>
-          <!-- <p style="margin-top:10px"><a href="#" target="_blank">Repo/Demo (add) →</a></p> -->
+          <h3>Connectify</h3>
+          <p>MERN-style social platform with secure JWT authentication, user profiles, and real-time interaction features.</p>
+          <div class="chips">
+            <span class="chip">React</span>
+            <span class="chip">Node.js</span>
+            <span class="chip">MongoDB</span>
+          </div>
+          <div class="project-footer">
+            <span style="font-size:13px;color:var(--muted)">Repo coming soon</span>
+            <span class="chip">Full-stack</span>
+          </div>
         </article>
 
-        <article class="card">
+        <!-- QuTech Admin Portal -->
+        <article class="card project-card reveal reveal-delay-3">
+          <div class="project-thumb thumb-admin">
+            <span class="thumb-label">QT</span>
+          </div>
           <h3>QuTech Admin Portal</h3>
-          <p class="lead">ASP.NET Core admin portal with subscriptions, audit trails, and identity-based login.</p>
+          <p>ASP.NET Core admin portal with subscription management, audit trails, and identity-based role login.</p>
           <div class="chips">
-            <span class="chip">ASP.NET</span><span class="chip">EF Core</span><span class="chip">SQL</span>
+            <span class="chip">ASP.NET Core</span>
+            <span class="chip">EF Core</span>
+            <span class="chip">SQL Server</span>
           </div>
-          <!-- <p style="margin-top:10px"><a href="#" target="_blank">Case study (add) →</a></p> -->
+          <div class="project-footer">
+            <span style="font-size:13px;color:var(--muted)">Case study coming</span>
+            <span class="chip">Full-stack</span>
+          </div>
         </article>
 
-        <article class="card">
-          <h3>Flight Information System</h3>
-          <p class="lead">Java Swing GUI for airline operations data with filtering and sorting.</p>
-          <div class="chips">
-            <span class="chip">Java</span><span class="chip">Swing</span>
+        <!-- Flight Information System -->
+        <article class="card project-card reveal reveal-delay-1">
+          <div class="project-thumb thumb-flight">
+            <span class="thumb-label">✈</span>
           </div>
-          <!-- <p style="margin-top:10px"><a href="#" target="_blank">Screens/Repo (add) →</a></p> -->
+          <h3>Flight Info System</h3>
+          <p>Java Swing GUI for airline operations data — supports filtering, sorting, and real-time status display.</p>
+          <div class="chips">
+            <span class="chip">Java</span>
+            <span class="chip">Swing</span>
+            <span class="chip">OOP</span>
+          </div>
+          <div class="project-footer">
+            <span style="font-size:13px;color:var(--muted)">Screens coming soon</span>
+            <span class="chip">Desktop</span>
+          </div>
         </article>
 
-        <article class="card">
+        <!-- Digital Clock -->
+        <article class="card project-card reveal reveal-delay-2">
+          <div class="project-thumb thumb-clock">
+            <span class="thumb-label">12:00</span>
+          </div>
           <h3>Digital Clock</h3>
-          <p class="lead">Real-time digital clock built with pure JS & CSS and smooth animations.</p>
+          <p>Real-time digital clock with smooth CSS animations and clean typography — built in pure vanilla JS.</p>
           <div class="chips">
-            <span class="chip">JavaScript</span><span class="chip">CSS</span>
+            <span class="chip">JavaScript</span>
+            <span class="chip">CSS</span>
+            <span class="chip">Animations</span>
           </div>
-          <p style="margin-top:10px">
-            <a href="https://ankeet13.github.io/DigitalClock/" target="_blank" rel="noopener">Live demo →</a>
-          </p>
+          <div class="project-footer">
+            <a href="https://ankeet13.github.io/DigitalClock/" target="_blank" rel="noopener" class="project-link">
+              Live demo
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <span class="chip">Frontend</span>
+          </div>
         </article>
 
-        <article class="card">
-          <h3>Automation & Trading Bots (R&D)</h3>
-          <p class="lead">High-risk research prototypes for Binance/Bybit with modular backtesting.</p>
-          <div class="chips">
-            <span class="chip">Python</span><span class="chip">Pandas</span>
+        <!-- Trading Bots -->
+        <article class="card project-card reveal reveal-delay-3">
+          <div class="project-thumb thumb-bots">
+            <span class="thumb-label">⚡</span>
           </div>
-          <!-- <p style="margin-top:10px"><a href="#" target="_blank">Docs/Repo (add) →</a></p> -->
+          <h3>Automation &amp; Trading Bots</h3>
+          <p>High-risk R&amp;D prototypes for Binance/Bybit with modular backtesting engines and risk-control systems.</p>
+          <div class="chips">
+            <span class="chip">Python</span>
+            <span class="chip">Pandas</span>
+            <span class="chip">Backtesting</span>
+          </div>
+          <div class="project-footer">
+            <span style="font-size:13px;color:var(--muted)">R&amp;D / private</span>
+            <span class="chip">Automation</span>
+          </div>
         </article>
+
       </div>
     </div>
   </section>
 
   <footer>
-    <div class="container">© <span id="year"></span> Sudip Ojha</div>
+    <div class="container footer-inner">
+      <span class="footer-copy">© <span id="year"></span> Sudip Ojha</span>
+      <div class="footer-links">
+        <a href="https://linkedin.com/in/sudip-ojha" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:ankee.ankeet13@gmail.com">Email</a>
+        <a href="services.html">Services</a>
+      </div>
+    </div>
   </footer>
-  <script>document.getElementById('year').textContent = new Date().getFullYear()</script>
+
 </body>
 </html>

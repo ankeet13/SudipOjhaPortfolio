@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Sudip Ojha | IT Support • Software • Cloud</title>
+  <title>Sudip Ojha | IT Support · Software · Cloud</title>
 
   <meta name="description" content="IT Support Officer in Sydney delivering reliable managed IT, secure cloud setups, and custom software for small businesses and startups.">
-  <meta property="og:title" content="Sudip Ojha — IT Support • Software • Cloud">
+  <meta property="og:title" content="Sudip Ojha — IT Support · Software · Cloud">
   <meta property="og:description" content="Managed IT, cybersecurity, software development, cloud & infrastructure, and automation.">
   <meta property="og:image" content="https://sudipojha.com/assets/images/og-image.png">
   <meta property="og:url" content="https://sudipojha.com">
@@ -17,87 +17,119 @@
   <script defer src="js/script.js"></script>
 </head>
 <body>
-  <!-- Splash -->
-  <div id="splash" class="hidden" aria-hidden="true">
-    <div class="logo-wrap">
-      <img src="assets/images/og-image.png" alt="Sudip Ojha Logo">
-    </div>
-  </div>
 
   <!-- Navbar -->
-  <nav class="navbar">
-    <div class="container">
-      <a href="index.html#hero" class="logo">
-        <img src="assets/images/og-image.png" alt="SO"><span>Sudip Ojha</span>
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo">
+        <img src="assets/images/og-image.png" alt="SO logo">
+        <span>Sudip Ojha</span>
       </a>
-      <div class="dashboard-menu">
-        <button id="dashboardToggle" aria-expanded="false">☰</button>
-        <div id="dashboardDropdown" class="dashboard-dropdown">
-          <a href="index.html#hero">Home</a>
-          <a href="index.html#about">About</a>
-          <a href="projects.html">Projects</a>
-          <a href="services.html">Services</a>
-          <a href="contact.html">Contact</a>
-        </div>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="index.html#about" class="nav-link">About</a>
+        <a href="projects.html" class="nav-link">Projects</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="contact.html" class="btn btn-nav">Contact</a>
       </div>
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </nav>
 
+  <!-- Mobile nav drawer -->
+  <div id="navDrawer" class="nav-drawer" aria-hidden="true">
+    <a href="index.html">Home</a>
+    <a href="index.html#about">About</a>
+    <a href="projects.html">Projects</a>
+    <a href="services.html">Services</a>
+    <a href="contact.html" class="cta">Contact →</a>
+  </div>
+
   <!-- Hero -->
   <header id="hero" class="hero">
-    <!-- Cinematic Orbital Halo (CSS/SVG, no JS) -->
-    <div class="halo" aria-hidden="true">
-      <div class="ring ring-1"></div>
-      <div class="ring ring-2"></div>
-      <div class="ring ring-3"></div>
-      <svg class="glow" viewBox="0 0 600 600" preserveAspectRatio="xMidYMid slice">
-        <defs>
-          <radialGradient id="g" cx="50%" cy="35%">
-            <stop offset="0%"  stop-color="rgba(56,189,248,0.45)"/>
-            <stop offset="60%" stop-color="rgba(56,189,248,0.12)"/>
-            <stop offset="100%" stop-color="rgba(0,0,0,0)"/>
-          </radialGradient>
-        </defs>
-        <circle cx="300" cy="210" r="220" fill="url(#g)"></circle>
-      </svg>
-    </div>
-
+    <canvas id="heroFX" aria-hidden="true"></canvas>
     <div class="container hero-content">
-      <h1 class="reveal">Empowering businesses through technology.</h1>
-      <p class="reveal delay-1">IT Support Officer in Sydney delivering reliable managed IT, secure cloud setups, and custom software.</p>
-      <div class="cta-row reveal delay-2">
-        <a href="contact.html" class="btn btn-primary">Book a free consult</a>
-        <a href="projects.html" class="btn">View projects</a>
+
+      <div class="hero-badge">
+        <span class="dot"></span>
+        Available for IT projects · Sydney
+      </div>
+
+      <h1>
+        Building reliable<br>
+        tech for <span class="gradient-text">businesses.</span>
+      </h1>
+
+      <p class="hero-sub">
+        IT Support Officer specialising in managed IT, secure cloud infrastructure,
+        and custom software — helping small businesses move faster without drama.
+      </p>
+
+      <div class="cta-row">
+        <a href="contact.html" class="btn btn-primary">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v2a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.08 4.18 2 2 0 0 1 4.06 2h2a2 2 0 0 1 2 1.72c.12.9.33 1.77.62 2.61a2 2 0 0 1-.45 2.11L7.1 9.9a16 16 0 0 0 6 6l1.46-1.17a2 2 0 0 1 2.11-.45c.84.29 1.71.5 2.61.62A2 2 0 0 1 22 16.92z"/></svg>
+          Book a free consult
+        </a>
+        <a href="projects.html" class="btn">
+          View projects
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+
+      <!-- Stats -->
+      <div class="hero-stats">
+        <div class="stat-item">
+          <div class="stat-num">3+</div>
+          <div class="stat-label">Years Experience</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">6+</div>
+          <div class="stat-label">Projects Built</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">MSP</div>
+          <div class="stat-label">IT Services</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">24h</div>
+          <div class="stat-label">Response Time</div>
+        </div>
       </div>
 
       <!-- Tech marquee -->
-      <div class="marquee reveal delay-3" aria-label="Technologies">
+      <div class="marquee-wrap" aria-label="Technologies">
         <div class="marquee-track">
-          <span>Windows&nbsp;11</span>
-          <span>Active&nbsp;Directory</span>
+          <span>Windows 11</span>
+          <span>Active Directory</span>
           <span>Azure</span>
-          <span>Group&nbsp;Policy</span>
+          <span>Group Policy</span>
           <span>Backups</span>
           <span>React</span>
-          <span>Node</span>
-          <span>ASP.NET&nbsp;Core</span>
-          <span>SQL</span>
+          <span>Node.js</span>
+          <span>ASP.NET Core</span>
+          <span>SQL Server</span>
           <span>Python</span>
           <span>Java</span>
           <span>C#</span>
+          <span>TypeScript</span>
+          <span>DNS / DHCP</span>
           <!-- duplicate for seamless loop -->
-          <span>Windows&nbsp;11</span>
-          <span>Active&nbsp;Directory</span>
+          <span>Windows 11</span>
+          <span>Active Directory</span>
           <span>Azure</span>
-          <span>Group&nbsp;Policy</span>
+          <span>Group Policy</span>
           <span>Backups</span>
           <span>React</span>
-          <span>Node</span>
-          <span>ASP.NET&nbsp;Core</span>
-          <span>SQL</span>
+          <span>Node.js</span>
+          <span>ASP.NET Core</span>
+          <span>SQL Server</span>
           <span>Python</span>
           <span>Java</span>
           <span>C#</span>
+          <span>TypeScript</span>
+          <span>DNS / DHCP</span>
         </div>
       </div>
     </div>
@@ -106,24 +138,44 @@
   <!-- About -->
   <section id="about" class="section">
     <div class="container">
-      <h2>About Sudip</h2>
-      <p class="lead">I’m an IT professional and consultant specialising in Managed IT Services, Software Development, Cybersecurity, and Cloud & Infrastructure.</p>
-      <div class="grid cols-2" style="margin-top:20px">
-        <div class="card">
-          <p><strong>Quick facts</strong></p>
-          <div class="chips" style="margin-top:10px">
-            <span class="chip">Sydney</span>
+      <p class="section-label"><span class="dot"></span>About</p>
+      <h2 class="section-heading reveal">Meet Sudip</h2>
+      <p class="section-sub reveal reveal-delay-1">
+        IT professional and consultant based in Sydney, specialising in Managed IT,
+        Software Development, Cybersecurity, and Cloud Infrastructure.
+      </p>
+
+      <div class="about-grid">
+        <div class="card about-card-main reveal reveal-delay-2">
+          <p class="quick-facts-title">Quick facts</p>
+          <div class="chips">
+            <span class="chip chip-accent">Sydney, Australia</span>
             <span class="chip">IT Support Officer @ Sunblest</span>
-            <span class="chip">Bachelor of IT (VU, Completed 2025)</span>
-            <span class="chip">Master of Applied IT (VU, Completing 2026)</span>
-            <span class="chip">AD/RODC</span>
-            <span class="chip">DNS/DHCP</span>
-            <span class="chip">Python • Java • C# • JS/TS</span>
-            <span class="chip">React • Node • ASP.NET • SQL</span>
+            <span class="chip">Bachelor of IT — VU (2025)</span>
+            <span class="chip">Master of Applied IT — VU (2026)</span>
+            <span class="chip">AD / RODC</span>
+            <span class="chip">DNS / DHCP</span>
+            <span class="chip">Python · Java · C# · JS/TS</span>
+            <span class="chip">React · Node · ASP.NET · SQL</span>
+            <span class="chip">Azure · OCI</span>
           </div>
         </div>
-        <div class="card">
-          <p>I build reliable systems: clean deployments, solid backups, and pragmatic software that helps teams move faster without drama.</p>
+        <div class="card reveal reveal-delay-3">
+          <div class="about-text">
+            <p>
+              I build <strong>reliable systems</strong> — clean deployments, solid backups,
+              and pragmatic software that helps teams move faster without drama.
+            </p>
+            <p>
+              Whether it's setting up a domain environment, migrating to the cloud,
+              or shipping a full-stack web app, I focus on outcomes that are
+              <strong>secure, maintainable, and well-documented</strong>.
+            </p>
+            <p>
+              Currently completing my Master's at Victoria University while working
+              full-time in IT support — always open to interesting projects.
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -132,22 +184,76 @@
   <!-- Services teaser -->
   <section class="section">
     <div class="container">
-      <h2>Services</h2>
-      <p class="lead">Simple, reliable, and secure — tailored for small businesses and startups.</p>
-      <div class="grid cols-3" style="margin-top:20px">
-        <article class="card"><h3>Managed IT (MSP)</h3><p class="lead">Monitoring, patching, backup & recovery, endpoint security, helpdesk.</p></article>
-        <article class="card"><h3>Cybersecurity</h3><p class="lead">Risk assessments, hardening, recovery drills, incident playbooks.</p></article>
-        <article class="card"><h3>Software & Cloud</h3><p class="lead">Web apps (React/Node, ASP.NET Core), APIs, SQL, Azure/OCI.</p></article>
+      <p class="section-label"><span class="dot"></span>Services</p>
+      <h2 class="section-heading reveal">What I do</h2>
+      <p class="section-sub reveal reveal-delay-1">Simple, reliable, and secure — tailored for small businesses and startups.</p>
+
+      <div class="grid cols-3" style="margin-top:40px">
+
+        <article class="card service-card reveal reveal-delay-1">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/>
+            </svg>
+          </div>
+          <div>
+            <h3>Managed IT (MSP)</h3>
+            <p>Monitoring, patching, backup &amp; recovery, endpoint security, helpdesk.</p>
+          </div>
+          <div class="chips">
+            <span class="chip">Windows 11</span><span class="chip">M365</span><span class="chip">Backups</span>
+          </div>
+        </article>
+
+        <article class="card service-card reveal reveal-delay-2">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+          </div>
+          <div>
+            <h3>Cybersecurity</h3>
+            <p>Risk assessments, hardening, recovery drills, incident playbooks.</p>
+          </div>
+          <div class="chips">
+            <span class="chip">Hardening</span><span class="chip">Audit</span><span class="chip">GPO</span>
+          </div>
+        </article>
+
+        <article class="card service-card reveal reveal-delay-3">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
+            </svg>
+          </div>
+          <div>
+            <h3>Software &amp; Cloud</h3>
+            <p>Web apps (React/Node, ASP.NET Core), APIs, SQL, Azure/OCI.</p>
+          </div>
+          <div class="chips">
+            <span class="chip">React</span><span class="chip">Azure</span><span class="chip">APIs</span>
+          </div>
+        </article>
+
       </div>
-      <div class="cta-row" style="margin-top:24px">
+
+      <div class="cta-row reveal" style="margin-top:32px">
         <a href="services.html" class="btn btn-primary">Explore all services</a>
+        <a href="projects.html" class="btn">View projects</a>
       </div>
     </div>
   </section>
 
   <footer>
-    <div class="container">© <span id="year"></span> Sudip Ojha • <a href="https://linkedin.com/in/sudip-ojha" target="_blank">LinkedIn</a></div>
+    <div class="container footer-inner">
+      <span class="footer-copy">© <span id="year"></span> Sudip Ojha</span>
+      <div class="footer-links">
+        <a href="https://linkedin.com/in/sudip-ojha" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:ankee.ankeet13@gmail.com">Email</a>
+        <a href="projects.html">Projects</a>
+      </div>
+    </div>
   </footer>
-  <script>document.getElementById('year').textContent=new Date().getFullYear()</script>
+
 </body>
 </html>

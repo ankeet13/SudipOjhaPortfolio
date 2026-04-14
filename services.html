@@ -6,112 +6,226 @@
   <title>Services | Sudip Ojha</title>
 
   <meta name="description" content="Professional IT services by Sudip Ojha: Managed IT, Cybersecurity, Software Development, Cloud & Infrastructure, Automation & Consulting.">
+  <meta property="og:title" content="Services — Sudip Ojha">
+  <meta property="og:image" content="https://sudipojha.com/assets/images/og-image.png">
+  <meta property="og:url" content="https://sudipojha.com/services.html">
+  <meta property="og:type" content="website">
+
   <link rel="preload" as="image" href="assets/images/og-image.png">
   <link rel="stylesheet" href="css/style.css"/>
   <script defer src="js/script.js"></script>
 </head>
 <body>
 
-  <!-- Splash / Logo Overlay -->
-  <div id="splash" class="hidden" aria-hidden="true">
-    <div class="logo-wrap">
-      <img src="assets/images/og-image.png" alt="Sudip Ojha Logo">
-    </div>
-  </div>
-
   <!-- Navbar -->
-  <nav class="navbar">
-    <div class="container">
-      <a href="index.html#hero" class="logo">
-        <img src="assets/images/og-image.png" alt="SO"><span>Sudip Ojha</span>
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo">
+        <img src="assets/images/og-image.png" alt="SO logo">
+        <span>Sudip Ojha</span>
       </a>
-      <div class="dashboard-menu">
-        <button id="dashboardToggle" aria-expanded="false">☰</button>
-        <div id="dashboardDropdown" class="dashboard-dropdown">
-          <a href="index.html#hero">Home</a>
-          <a href="index.html#about">About</a>
-          <a href="projects.html">Projects</a>
-          <a href="services.html">Services</a>
-          <a href="contact.html">Contact</a>
-        </div>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="index.html#about" class="nav-link">About</a>
+        <a href="projects.html" class="nav-link">Projects</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="contact.html" class="btn btn-nav">Contact</a>
       </div>
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </nav>
+
+  <!-- Mobile nav drawer -->
+  <div id="navDrawer" class="nav-drawer" aria-hidden="true">
+    <a href="index.html">Home</a>
+    <a href="index.html#about">About</a>
+    <a href="projects.html">Projects</a>
+    <a href="services.html">Services</a>
+    <a href="contact.html" class="cta">Contact →</a>
+  </div>
 
   <!-- Services -->
   <section class="section" style="padding-top:120px">
     <div class="container">
-      <h2>Services</h2>
-      <p class="lead">End-to-end IT solutions tailored for small businesses and startups.</p>
+      <p class="section-label"><span class="dot"></span>Services</p>
+      <h2 class="section-heading reveal">End-to-end IT solutions</h2>
+      <p class="section-sub reveal reveal-delay-1">Simple, reliable, and secure — tailored for small businesses and startups that need IT done right.</p>
 
-      <div class="grid cols-3" style="margin-top:20px">
-        <article class="card">
-          <h3>Managed IT Services (MSP)</h3>
-          <p class="lead">Monitoring, patching, backup & recovery, endpoint security, helpdesk, licensing.</p>
-          <div class="chips"><span class="chip">Windows 11</span><span class="chip">M365</span><span class="chip">Backups</span></div>
+      <div class="grid cols-3" style="margin-top:48px">
+
+        <article class="card service-card reveal reveal-delay-1">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/>
+            </svg>
+          </div>
+          <div>
+            <h3>Managed IT Services</h3>
+            <p>Monitoring, patching, backup &amp; recovery, endpoint security, helpdesk, and licensing management.</p>
+          </div>
+          <div class="chips">
+            <span class="chip">Windows 11</span>
+            <span class="chip">M365</span>
+            <span class="chip">Backups</span>
+            <span class="chip">Helpdesk</span>
+          </div>
         </article>
 
-        <article class="card">
-          <h3>Cybersecurity Consulting</h3>
-          <p class="lead">Risk assessments, GPO hardening, recovery drills, incident playbooks, awareness.</p>
-          <div class="chips"><span class="chip">Hardening</span><span class="chip">Audit</span><span class="chip">Training</span></div>
+        <article class="card service-card reveal reveal-delay-2">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+          </div>
+          <div>
+            <h3>Cybersecurity Consulting</h3>
+            <p>Risk assessments, GPO hardening, recovery drills, incident playbooks, and security awareness training.</p>
+          </div>
+          <div class="chips">
+            <span class="chip">Hardening</span>
+            <span class="chip">Audit</span>
+            <span class="chip">GPO</span>
+            <span class="chip">Training</span>
+          </div>
         </article>
 
-        <article class="card">
-          <h3>Custom Software Development</h3>
-          <p class="lead">Web apps and portals built with React, Node/Express, ASP.NET Core, and SQL.</p>
-          <div class="chips"><span class="chip">Auth</span><span class="chip">APIs</span><span class="chip">Dashboards</span></div>
+        <article class="card service-card reveal reveal-delay-3">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
+            </svg>
+          </div>
+          <div>
+            <h3>Custom Software Dev</h3>
+            <p>Web apps and portals built with React, Node/Express, ASP.NET Core, and SQL — from auth to deployment.</p>
+          </div>
+          <div class="chips">
+            <span class="chip">React</span>
+            <span class="chip">Node</span>
+            <span class="chip">ASP.NET</span>
+            <span class="chip">APIs</span>
+          </div>
         </article>
 
-        <article class="card">
-          <h3>IT Infrastructure & Cloud</h3>
-          <p class="lead">AD/RODC, DNS/DHCP, VLANs, server builds, Azure/OCI migration, monitoring.</p>
-          <div class="chips"><span class="chip">Servers</span><span class="chip">Networks</span><span class="chip">Cloud</span></div>
+        <article class="card service-card reveal reveal-delay-1">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/>
+            </svg>
+          </div>
+          <div>
+            <h3>IT Infrastructure &amp; Cloud</h3>
+            <p>AD/RODC, DNS/DHCP, VLANs, server builds, Azure/OCI migration, and infrastructure monitoring.</p>
+          </div>
+          <div class="chips">
+            <span class="chip">Azure</span>
+            <span class="chip">Servers</span>
+            <span class="chip">Networks</span>
+            <span class="chip">AD/RODC</span>
+          </div>
         </article>
 
-        <article class="card">
-          <h3>Automation & AI</h3>
-          <p class="lead">Python scripts, integrations, agents, and trading-bot R&D with risk controls.</p>
-          <div class="chips"><span class="chip">Python</span><span class="chip">Pandas</span><span class="chip">Alerts</span></div>
+        <article class="card service-card reveal reveal-delay-2">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/>
+            </svg>
+          </div>
+          <div>
+            <h3>Automation &amp; AI</h3>
+            <p>Python scripts, workflow integrations, AI agents, and trading-bot R&amp;D with built-in risk controls.</p>
+          </div>
+          <div class="chips">
+            <span class="chip">Python</span>
+            <span class="chip">Pandas</span>
+            <span class="chip">Agents</span>
+            <span class="chip">Alerts</span>
+          </div>
         </article>
 
-        <article class="card">
-          <h3>Freelance / Consulting</h3>
-          <p class="lead">Scoped audits, documentation, and ongoing advisory with clear deliverables.</p>
-          <div class="chips"><span class="chip">Audits</span><span class="chip">Docs</span><span class="chip">SLA</span></div>
+        <article class="card service-card reveal reveal-delay-3">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 3H8l-2 4h12l-2-4z"/>
+            </svg>
+          </div>
+          <div>
+            <h3>Freelance Consulting</h3>
+            <p>Scoped audits, technical documentation, and ongoing advisory engagements with clear deliverables and SLAs.</p>
+          </div>
+          <div class="chips">
+            <span class="chip">Audits</span>
+            <span class="chip">Docs</span>
+            <span class="chip">SLA</span>
+            <span class="chip">Advisory</span>
+          </div>
         </article>
+
       </div>
 
       <!-- Packages -->
-      <div class="grid" style="margin-top:28px">
-        <div class="card">
-          <h3>Packages</h3>
-          <div class="grid cols-3" style="margin-top:12px">
-            <div class="card">
-              <strong>Starter – $499</strong>
-              <p class="lead">1–3 pages or basic IT setup: domain/DNS, email, security basics.</p>
+      <div style="margin-top:64px">
+        <p class="section-label"><span class="dot"></span>Packages</p>
+        <h2 class="section-heading reveal" style="margin-bottom:8px">Simple pricing</h2>
+        <p class="section-sub reveal reveal-delay-1">Transparent packages to get you started fast. Custom scopes always available.</p>
+
+        <div class="packages-grid" style="margin-top:32px">
+          <div class="package-card reveal reveal-delay-1">
+            <p class="package-name">Starter</p>
+            <p class="package-price">$499</p>
+            <p class="package-desc">1–3 pages or basic IT setup: domain/DNS, email configuration, and security fundamentals.</p>
+            <div class="chips" style="margin-top:16px">
+              <span class="chip">DNS Setup</span>
+              <span class="chip">Email</span>
+              <span class="chip">Security Basics</span>
             </div>
-            <div class="card" style="border-color:rgba(56,189,248,.35)">
-              <strong>Growth – $1,499</strong>
-              <p class="lead">5–8 pages or infra uplift, backups/monitoring, deployment & documentation.</p>
+          </div>
+
+          <div class="package-card featured reveal reveal-delay-2">
+            <p class="package-name">Growth</p>
+            <p class="package-price">$1,499</p>
+            <p class="package-desc">5–8 pages or infrastructure uplift: backups, monitoring, deployment, and full documentation.</p>
+            <div class="chips" style="margin-top:16px">
+              <span class="chip chip-accent">Backups</span>
+              <span class="chip chip-accent">Monitoring</span>
+              <span class="chip chip-accent">Deployment</span>
             </div>
-            <div class="card">
-              <strong>Pro – Custom</strong>
-              <p class="lead">Complex apps/networks, CI/CD, observability, security & compliance.</p>
+          </div>
+
+          <div class="package-card reveal reveal-delay-3">
+            <p class="package-name">Pro</p>
+            <p class="package-price">Custom <span>/ quote</span></p>
+            <p class="package-desc">Complex apps or networks: CI/CD pipelines, observability, security audits, and compliance.</p>
+            <div class="chips" style="margin-top:16px">
+              <span class="chip">CI/CD</span>
+              <span class="chip">Compliance</span>
+              <span class="chip">Observability</span>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="cta-row" style="margin-top:26px">
-        <a href="contact.html" class="btn btn-primary">Get a quote</a>
+      <div class="cta-row reveal" style="margin-top:40px">
+        <a href="contact.html" class="btn btn-primary">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M22 16.92v2a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.08 4.18 2 2 0 0 1 4.06 2h2a2 2 0 0 1 2 1.72c.12.9.33 1.77.62 2.61a2 2 0 0 1-.45 2.11L7.1 9.9a16 16 0 0 0 6 6l1.46-1.17a2 2 0 0 1 2.11-.45c.84.29 1.71.5 2.61.62A2 2 0 0 1 22 16.92z"/></svg>
+          Get a quote
+        </a>
       </div>
     </div>
   </section>
 
   <footer>
-    <div class="container">© <span id="year"></span> Sudip Ojha</div>
+    <div class="container footer-inner">
+      <span class="footer-copy">© <span id="year"></span> Sudip Ojha</span>
+      <div class="footer-links">
+        <a href="https://linkedin.com/in/sudip-ojha" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:ankee.ankeet13@gmail.com">Email</a>
+        <a href="projects.html">Projects</a>
+      </div>
+    </div>
   </footer>
-  <script>document.getElementById('year').textContent=new Date().getFullYear()</script>
+
 </body>
 </html>

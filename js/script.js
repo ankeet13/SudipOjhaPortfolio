@@ -101,13 +101,13 @@ document.addEventListener('DOMContentLoaded', () => {
   const DPR = Math.min(2, window.devicePixelRatio || 1);
 
   const CFG = {
-    density:     0.00012,
-    maxLinkDist: 130,
-    nodeR:       [1.0, 1.8],
-    speed:       0.12,
-    accentA:     'rgba(34,211,238,',
-    accentB:     'rgba(167,139,250,',
-    lineColor:   'rgba(200,220,255,0.06)',
+    density:     0.00008,
+    maxLinkDist: 110,
+    nodeR:       [0.8, 1.5],
+    speed:       0.10,
+    accentA:     'rgba(201,245,61,',
+    accentB:     'rgba(240,200,60,',
+    lineColor:   'rgba(201,245,61,0.04)',
   };
 
   function spawn() {
@@ -179,7 +179,7 @@ document.addEventListener('DOMContentLoaded', () => {
     for (const n of nodes) {
       const alpha = 0.7 + 0.3 * Math.sin(t / 1500 + n.x);
       ctx.shadowBlur = 8 * DPR;
-      ctx.shadowColor = n.cyan ? '#22d3ee' : '#a78bfa';
+      ctx.shadowColor = n.cyan ? '#c9f53d' : '#f0c842';
       ctx.fillStyle = (n.cyan ? CFG.accentA : CFG.accentB) + alpha.toFixed(2) + ')';
       ctx.beginPath();
       ctx.arc(n.x, n.y, n.r, 0, Math.PI * 2);

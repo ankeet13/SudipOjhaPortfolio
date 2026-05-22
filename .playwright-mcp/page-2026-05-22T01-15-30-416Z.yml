@@ -1,0 +1,82 @@
+- generic [active] [ref=e1]:
+  - navigation "Main navigation" [ref=e2]:
+    - generic [ref=e3]:
+      - link "SO Sudip Ojha" [ref=e4] [cursor=pointer]:
+        - /url: index.html
+        - text: SO
+        - generic [ref=e5]: Sudip Ojha
+      - generic [ref=e6]:
+        - link "Home" [ref=e7] [cursor=pointer]:
+          - /url: index.html
+        - link "About" [ref=e8] [cursor=pointer]:
+          - /url: index.html#about
+        - link "Projects" [ref=e9] [cursor=pointer]:
+          - /url: projects.html
+        - link "Services" [ref=e10] [cursor=pointer]:
+          - /url: services.html
+        - link "Contact" [ref=e11] [cursor=pointer]:
+          - /url: contact.html
+  - generic [ref=e13]:
+    - paragraph [ref=e14]: Work
+    - heading "Selected projects" [level=2] [ref=e15]
+    - paragraph [ref=e16]: A collection of builds ranging from full-stack web apps to automation tools and IT infrastructure.
+    - generic [ref=e17]:
+      - generic [ref=e18]:
+        - paragraph [ref=e19]: "01"
+        - heading "Weatherrrrr" [level=2] [ref=e20]
+        - paragraph [ref=e21]: Modern weather app with real-time current conditions and a multi-day forecast, powered by the OpenWeather API. Built with vanilla JS and a clean component structure.
+        - generic [ref=e22]:
+          - generic [ref=e23]: HTML/CSS
+          - generic [ref=e24]: JavaScript
+          - generic [ref=e25]: REST API
+          - generic [ref=e26]: Frontend
+        - link "Live demo →" [ref=e27] [cursor=pointer]:
+          - /url: https://ankeet13.github.io/Weatherrrrr/
+      - generic [ref=e29]: WX
+    - generic [ref=e30]:
+      - generic [ref=e31]:
+        - generic [ref=e32]: "02"
+        - generic [ref=e33]:
+          - generic [ref=e34]: Connectify
+          - generic [ref=e35]: MERN social platform · JWT auth · user profiles · real-time interactions
+        - generic [ref=e36]: Full-stack
+        - generic [ref=e37]: Repo coming
+      - generic [ref=e38]:
+        - generic [ref=e39]: "03"
+        - generic [ref=e40]:
+          - generic [ref=e41]: QuTech Admin Portal
+          - generic [ref=e42]: ASP.NET Core · EF Core · SQL Server · subscription management · audit trails
+        - generic [ref=e43]: Full-stack
+        - generic [ref=e44]: Case study coming
+      - generic [ref=e45]:
+        - generic [ref=e46]: "04"
+        - generic [ref=e47]:
+          - generic [ref=e48]: Flight Info System
+          - generic [ref=e49]: Java Swing · OOP · filtering and sorting · real-time status display
+        - generic [ref=e50]: Desktop
+        - generic [ref=e51]: Screens coming
+      - link "05 Digital Clock Vanilla JS · CSS animations · real-time display Frontend Live demo →" [ref=e52]:
+        - /url: https://ankeet13.github.io/DigitalClock/
+        - generic [ref=e53]: "05"
+        - generic [ref=e54]:
+          - generic [ref=e55]: Digital Clock
+          - generic [ref=e56]: Vanilla JS · CSS animations · real-time display
+        - generic [ref=e57]: Frontend
+        - generic [ref=e58]: Live demo →
+      - generic [ref=e59]:
+        - generic [ref=e60]: "06"
+        - generic [ref=e61]:
+          - generic [ref=e62]: Automation & Trading Bots
+          - generic [ref=e63]: Python · Pandas · Binance/Bybit · modular backtesting · risk controls
+        - generic [ref=e64]: Automation
+        - generic [ref=e65]: R&D / private
+  - contentinfo [ref=e66]:
+    - generic [ref=e67]:
+      - generic [ref=e68]: © 2026 Sudip Ojha
+      - generic [ref=e69]:
+        - link "LinkedIn" [ref=e70] [cursor=pointer]:
+          - /url: https://linkedin.com/in/sudip-ojha
+        - link "Email" [ref=e71] [cursor=pointer]:
+          - /url: mailto:ankee.ankeet13@gmail.com
+        - link "Services" [ref=e72] [cursor=pointer]:
+          - /url: services.html

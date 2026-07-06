@@ -4,139 +4,361 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Projects | Sudip Ojha</title>
-  <meta name="description" content="Selected builds and prototypes by Sudip Ojha — web apps, admin portals, automation tools, and more.">
+  <meta name="description" content="Selected builds and prototypes by Sudip Ojha — security tooling, web apps, admin portals, automation tools, and more.">
+  <meta name="theme-color" content="#05080f">
   <meta property="og:title" content="Projects — Sudip Ojha">
   <meta property="og:image" content="https://sudipojha.com/assets/images/og-image.png">
   <meta property="og:url" content="https://sudipojha.com/projects.html">
   <meta property="og:type" content="website">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg"/>
+  <link rel="preconnect" href="https://api.fontshare.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <script>document.documentElement.classList.add('js');</script>
   <link rel="stylesheet" href="css/style.css"/>
   <script defer src="js/script.js"></script>
 </head>
 <body>
 
-  <nav class="navbar" role="navigation" aria-label="Main navigation">
-    <div class="container nav-inner">
-      <a href="index.html" class="logo">
-        <img src="assets/images/og-image.png" alt="SO logo">
-        <span>Sudip Ojha</span>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="bg-fx" aria-hidden="true"></div>
+  <div class="progress" aria-hidden="true"></div>
+
+  <!-- Nav -->
+  <header class="nav">
+    <div class="container nav__inner">
+      <a href="index.html" class="nav__logo" aria-label="Sudip Ojha — home">
+        <span class="nav__caret">❯</span>sudip.ojha<span class="nav__cursor" aria-hidden="true"></span>
       </a>
-      <div class="nav-links">
-        <a href="index.html" class="nav-link">Home</a>
-        <a href="index.html#about" class="nav-link">About</a>
-        <a href="projects.html" class="nav-link">Projects</a>
-        <a href="services.html" class="nav-link">Services</a>
-        <a href="contact.html" class="btn-nav">Contact</a>
-      </div>
-      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-label="Toggle menu">
-        <span></span><span></span><span></span>
+      <nav class="nav__links" aria-label="Main navigation">
+        <a href="index.html" class="nav__link">Home</a>
+        <a href="index.html#about" class="nav__link">About</a>
+        <a href="projects.html" class="nav__link">Projects</a>
+        <a href="services.html" class="nav__link">Services</a>
+        <a href="contact.html" class="nav__cta">Contact</a>
+      </nav>
+      <button class="nav__burger" id="navToggle" aria-expanded="false" aria-controls="menu" aria-label="Toggle menu">
+        <span></span><span></span>
       </button>
     </div>
-  </nav>
+  </header>
 
-  <div id="navDrawer" class="nav-drawer" aria-hidden="true">
-    <a href="index.html">Home</a>
-    <a href="index.html#about">About</a>
-    <a href="projects.html">Projects</a>
-    <a href="services.html">Services</a>
-    <a href="contact.html" class="cta">Contact</a>
+  <!-- Full-screen mobile menu -->
+  <div class="menu" id="menu" aria-hidden="true">
+    <nav class="menu__links" aria-label="Mobile navigation">
+      <a href="index.html"><span class="n">01</span>Home</a>
+      <a href="index.html#about"><span class="n">02</span>About</a>
+      <a href="projects.html"><span class="n">03</span>Projects</a>
+      <a href="services.html"><span class="n">04</span>Services</a>
+      <a href="contact.html"><span class="n">05</span>Contact</a>
+    </nav>
+    <div class="menu__meta">
+      <a href="mailto:ankeet.ankeet13@gmail.com">ankeet.ankeet13@gmail.com</a>
+      <a href="https://linkedin.com/in/sudip-ojha" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <span>Sydney, Australia</span>
+    </div>
   </div>
 
-  <section class="section" style="padding-top:120px">
+  <main id="main">
+
+    <!-- Page hero -->
+    <section class="page-hero">
+      <div class="container">
+        <p class="kicker"><span class="idx">01</span> // work</p>
+        <h1 class="h1">Selected <span class="grad">projects</span></h1>
+        <p class="lede reveal reveal-delay-1">
+          A collection of builds ranging from security tooling and full-stack web apps
+          to automation tools and IT infrastructure.
+        </p>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:24px">
+      <div class="container">
+
+        <!-- Featured: AEGIS Scanner -->
+        <article class="panel spot featured reveal">
+          <div class="featured__copy">
+            <span class="featured__tag"><span class="pulse-dot"></span>Featured · Security R&amp;D</span>
+            <h2>AEGIS Scanner</h2>
+            <p>
+              AI-assisted DAST tool that crawls JavaScript-heavy web apps, maps their attack
+              surface, and actively tests for SQL injection, broken access control, XSS, and
+              security misconfiguration — aggressively filtering false positives so every
+              finding can be trusted. Built to approach detection quality comparable to
+              Burp Suite and OWASP ZAP.
+            </p>
+            <p>
+              My part in the four-developer capstone (Victoria University): the Playwright
+              crawler with network interception and soft-404 fingerprinting, the IDOR and
+              authorization-bypass scanner with differential analysis, and the Flask API
+              that orchestrates scan modules concurrently.
+            </p>
+            <div class="chips">
+              <span class="chip">Python</span><span class="chip">Flask</span>
+              <span class="chip">Playwright</span><span class="chip">DAST</span>
+              <span class="chip">OWASP Top 10</span>
+            </div>
+            <div class="cta-row" style="margin-top:30px">
+              <a href="https://github.com/ankeet13/aegis-scanner" target="_blank" rel="noopener" class="btn btn--primary">
+                View on GitHub <span class="arr">↗</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="scan" aria-hidden="true">
+            <div class="scan__head">
+              <span class="scan__logo">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 3l7 3v5c0 4.4-2.9 7.4-7 9-4.1-1.6-7-4.6-7-9V6l7-3z"/>
+                  <path d="M9 12l2 2 4-4.5"/>
+                </svg>
+                AEGIS
+              </span>
+              <span class="scan__mode">DAST · active scan</span>
+            </div>
+            <div class="scan__target"><b>target — juice-shop.local</b><span class="scan__spa">SPA</span></div>
+            <div class="scan__bar"><span class="scan__fill"></span></div>
+            <div class="scan__stats">
+              <span><b>142</b> routes</span>
+              <span><b>4</b> modules</span>
+              <span>fp-filter <b>on</b></span>
+            </div>
+            <div class="scan__log">
+              <div class="scan__row"><span class="sev sev--high">HIGH</span><span class="scan__what">SQL injection</span><span class="scan__where">/rest/products/search</span></div>
+              <div class="scan__row"><span class="sev sev--high">HIGH</span><span class="scan__what">IDOR — basket access</span><span class="scan__where">/api/basket/{id}</span></div>
+              <div class="scan__row"><span class="sev sev--med">MED</span><span class="scan__what">Reflected XSS</span><span class="scan__where">/#/search?q=</span></div>
+              <div class="scan__row"><span class="sev sev--med">MED</span><span class="scan__what">Security misconfig</span><span class="scan__where">missing headers</span></div>
+            </div>
+            <div class="scan__foot"><span class="pulse-dot"></span>filtering false positives — 3 findings suppressed</div>
+          </div>
+        </article>
+
+        <!-- Work grid -->
+        <div class="work-grid">
+
+          <!-- 02 Weatherrrrr -->
+          <article class="panel spot work-card reveal">
+            <div class="work-card__visual" aria-hidden="true">
+              <div class="weather weather--mini">
+                <svg class="weather__sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+                  <circle cx="12" cy="12" r="4" fill="currentColor" stroke="none"/>
+                  <path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/>
+                </svg>
+                <span class="weather__cloud"></span>
+                <p class="weather__city">Sydney · AU</p>
+                <p class="weather__temp">22°</p>
+                <p class="weather__desc">Partly cloudy · feels like 23°</p>
+                <div class="weather__row">
+                  <div class="weather__day"><p class="d">Tue</p><p class="t">21°</p></div>
+                  <div class="weather__day"><p class="d">Wed</p><p class="t">24°</p></div>
+                  <div class="weather__day"><p class="d">Thu</p><p class="t">19°</p></div>
+                  <div class="weather__day"><p class="d">Fri</p><p class="t">23°</p></div>
+                </div>
+              </div>
+            </div>
+            <div class="work-card__body">
+              <div class="work-card__head">
+                <h3>Weatherrrrr</h3>
+                <span class="work-card__num">/02</span>
+              </div>
+              <p>Real-time conditions and multi-day forecast via the OpenWeather API — vanilla JS with a clean component structure.</p>
+              <div class="chips">
+                <span class="chip">HTML/CSS</span><span class="chip">JavaScript</span><span class="chip">REST API</span>
+              </div>
+              <div class="work-card__foot">
+                <a href="https://ankeet13.github.io/Weatherrrrr/" target="_blank" rel="noopener" class="work-link">Live demo <span aria-hidden="true">→</span></a>
+                <span class="status-tag is-live">Live</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 03 Connectify -->
+          <article class="panel spot work-card reveal reveal-delay-1">
+            <div class="work-card__visual" aria-hidden="true">
+              <div class="mock-feed">
+                <div class="post"><span class="ava"></span><span class="lines"><span class="l1"></span><span class="l2"></span></span><span class="heart">♥ 24</span></div>
+                <div class="post"><span class="ava"></span><span class="lines"><span class="l1"></span><span class="l2"></span></span><span class="heart">♥ 51</span></div>
+                <div class="post"><span class="ava"></span><span class="lines"><span class="l1"></span><span class="l2"></span></span><span class="heart">♥ 8</span></div>
+              </div>
+            </div>
+            <div class="work-card__body">
+              <div class="work-card__head">
+                <h3>Connectify</h3>
+                <span class="work-card__num">/03</span>
+              </div>
+              <p>MERN social platform — JWT auth, user profiles, real-time interactions.</p>
+              <div class="chips">
+                <span class="chip">MongoDB</span><span class="chip">Express</span>
+                <span class="chip">React</span><span class="chip">Node.js</span>
+              </div>
+              <div class="work-card__foot">
+                <span class="status-tag">Repo coming</span>
+                <span class="work-card__num">Full-stack</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 04 QuTech Admin Portal -->
+          <article class="panel spot work-card reveal">
+            <div class="work-card__visual" aria-hidden="true">
+              <div class="mock-dash">
+                <div class="side"><i></i><i></i><i></i><i></i></div>
+                <div class="main">
+                  <div class="kpis"><b></b><b></b><b></b></div>
+                  <div class="bars">
+                    <span class="bar" style="--h:46%"></span>
+                    <span class="bar" style="--h:72%"></span>
+                    <span class="bar" style="--h:38%"></span>
+                    <span class="bar" style="--h:88%"></span>
+                    <span class="bar" style="--h:58%"></span>
+                    <span class="bar" style="--h:76%"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="work-card__body">
+              <div class="work-card__head">
+                <h3>QuTech Admin Portal</h3>
+                <span class="work-card__num">/04</span>
+              </div>
+              <p>ASP.NET Core + EF Core + SQL Server — subscription management and audit trails.</p>
+              <div class="chips">
+                <span class="chip">ASP.NET Core</span><span class="chip">EF Core</span><span class="chip">SQL Server</span>
+              </div>
+              <div class="work-card__foot">
+                <span class="status-tag">Case study coming</span>
+                <span class="work-card__num">Full-stack</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 05 Flight Info System -->
+          <article class="panel spot work-card reveal reveal-delay-1">
+            <div class="work-card__visual" aria-hidden="true">
+              <div class="mock-flight">
+                <div class="fhead"><span>FLIGHT</span><span>ROUTE</span><span>STATUS</span></div>
+                <div class="frow"><span class="code">QF402</span><span>SYD → MEL</span><span class="ok">ON TIME</span></div>
+                <div class="frow"><span class="code">JQ505</span><span>SYD → BNE</span><span class="flip"><span>BOARDING</span><span>FINAL CALL</span></span></div>
+                <div class="frow"><span class="code">VA818</span><span>SYD → PER</span><span>GATE 12</span></div>
+              </div>
+            </div>
+            <div class="work-card__body">
+              <div class="work-card__head">
+                <h3>Flight Info System</h3>
+                <span class="work-card__num">/05</span>
+              </div>
+              <p>Java Swing desktop app — OOP design, filtering and sorting, real-time status display.</p>
+              <div class="chips">
+                <span class="chip">Java</span><span class="chip">Swing</span><span class="chip">OOP</span>
+              </div>
+              <div class="work-card__foot">
+                <span class="status-tag">Screens coming</span>
+                <span class="work-card__num">Desktop</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 06 Digital Clock — actually live -->
+          <article class="panel spot work-card reveal">
+            <div class="work-card__visual">
+              <div class="mock-clock" aria-label="Live clock — Sydney time">
+                <p class="time js-clock">--<span class="col">:</span>--<span class="col">:</span><span class="sec">--</span></p>
+                <p class="date js-clock-date">SYDNEY TIME</p>
+              </div>
+            </div>
+            <div class="work-card__body">
+              <div class="work-card__head">
+                <h3>Digital Clock</h3>
+                <span class="work-card__num">/06</span>
+              </div>
+              <p>Vanilla JS + CSS animations, real-time display. The clock above is ticking right now.</p>
+              <div class="chips">
+                <span class="chip">JavaScript</span><span class="chip">CSS animations</span>
+              </div>
+              <div class="work-card__foot">
+                <a href="https://ankeet13.github.io/DigitalClock/" target="_blank" rel="noopener" class="work-link">Live demo <span aria-hidden="true">→</span></a>
+                <span class="status-tag is-live">Live</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 07 Automation & Trading Bots -->
+          <article class="panel spot work-card reveal reveal-delay-1">
+            <div class="work-card__visual" aria-hidden="true">
+              <div class="mock-chart">
+                <svg viewBox="0 0 340 170">
+                  <defs>
+                    <linearGradient id="chartFill" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0%" stop-color="#3fe0a3" stop-opacity="0.22"/>
+                      <stop offset="100%" stop-color="#3fe0a3" stop-opacity="0"/>
+                    </linearGradient>
+                  </defs>
+                  <line class="grid-line" x1="0" y1="42" x2="340" y2="42"/>
+                  <line class="grid-line" x1="0" y1="84" x2="340" y2="84"/>
+                  <line class="grid-line" x1="0" y1="126" x2="340" y2="126"/>
+                  <g class="candle"><rect class="up" x="34" y="96" width="10" height="34" rx="2"/><rect class="up" x="38" y="86" width="2" height="54"/></g>
+                  <g class="candle"><rect class="down" x="94" y="76" width="10" height="30" rx="2"/><rect class="down" x="98" y="66" width="2" height="50"/></g>
+                  <g class="candle"><rect class="up" x="154" y="60" width="10" height="42" rx="2"/><rect class="up" x="158" y="50" width="2" height="62"/></g>
+                  <g class="candle"><rect class="down" x="214" y="72" width="10" height="26" rx="2"/><rect class="down" x="218" y="64" width="2" height="42"/></g>
+                  <g class="candle"><rect class="up" x="274" y="44" width="10" height="46" rx="2"/><rect class="up" x="278" y="34" width="2" height="64"/></g>
+                  <path class="area" d="M0 128 L48 112 L96 118 L150 84 L206 96 L262 58 L340 44 L340 170 L0 170 Z"/>
+                  <polyline class="line" pathLength="1" points="0,128 48,112 96,118 150,84 206,96 262,58 340,44"/>
+                </svg>
+              </div>
+            </div>
+            <div class="work-card__body">
+              <div class="work-card__head">
+                <h3>Automation &amp; Trading Bots</h3>
+                <span class="work-card__num">/07</span>
+              </div>
+              <p>Python + Pandas on Binance/Bybit — modular backtesting with built-in risk controls.</p>
+              <div class="chips">
+                <span class="chip">Python</span><span class="chip">Pandas</span><span class="chip">Backtesting</span>
+              </div>
+              <div class="work-card__foot">
+                <span class="status-tag">R&amp;D / private</span>
+                <span class="work-card__num">Automation</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <div class="cta-row reveal" style="justify-content:center">
+          <a href="contact.html" class="btn btn--primary">Start a project <span class="arr">→</span></a>
+          <a href="services.html" class="btn">View services</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
     <div class="container">
-      <p class="section-label">Work</p>
-      <h2 class="section-heading reveal">Selected projects</h2>
-      <p class="section-sub reveal reveal-delay-1">
-        A collection of builds ranging from full-stack web apps to automation tools and IT infrastructure.
-      </p>
-
-      <!-- Featured project -->
-      <div class="project-featured reveal reveal-delay-2">
-        <div>
-          <p class="project-featured-num">01</p>
-          <h2>Weatherrrrr</h2>
-          <p>
-            Modern weather app with real-time current conditions and a multi-day forecast,
-            powered by the OpenWeather API. Built with vanilla JS and a clean component structure.
-          </p>
-          <div class="chips">
-            <span class="chip">HTML/CSS</span>
-            <span class="chip">JavaScript</span>
-            <span class="chip">REST API</span>
-            <span class="chip">Frontend</span>
-          </div>
-          <a href="https://ankeet13.github.io/Weatherrrrr/" target="_blank" rel="noopener" class="btn btn-primary" style="margin-top:24px">
-            Live demo &rarr;
-          </a>
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="index.html" class="nav__logo"><span class="nav__caret">❯</span>sudip.ojha</a>
+          <p>Managed IT, secure cloud, and custom software for small businesses that need things done right.</p>
         </div>
-        <div class="project-thumb thumb-weather">
-          <span class="thumb-label">WX</span>
+        <div class="footer__col">
+          <p class="col-name">Pages</p>
+          <a href="index.html">Home</a>
+          <a href="projects.html">Projects</a>
+          <a href="services.html">Services</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer__col">
+          <p class="col-name">Connect</p>
+          <a href="mailto:ankeet.ankeet13@gmail.com">ankeet.ankeet13@gmail.com</a>
+          <a href="https://linkedin.com/in/sudip-ojha" target="_blank" rel="noopener">LinkedIn ↗</a>
+          <a href="tel:+61457949567">+61 457 949 567</a>
         </div>
       </div>
-
-      <!-- Project list -->
-      <div class="project-list">
-
-        <div class="project-row reveal reveal-delay-1">
-          <span class="project-row-num">02</span>
-          <div>
-            <div class="project-row-name">Connectify</div>
-            <div class="project-row-sub">MERN social platform &middot; JWT auth &middot; user profiles &middot; real-time interactions</div>
-          </div>
-          <span class="project-row-type">Full-stack</span>
-          <span class="project-row-action">Repo coming</span>
-        </div>
-
-        <div class="project-row reveal reveal-delay-2">
-          <span class="project-row-num">03</span>
-          <div>
-            <div class="project-row-name">QuTech Admin Portal</div>
-            <div class="project-row-sub">ASP.NET Core &middot; EF Core &middot; SQL Server &middot; subscription management &middot; audit trails</div>
-          </div>
-          <span class="project-row-type">Full-stack</span>
-          <span class="project-row-action">Case study coming</span>
-        </div>
-
-        <div class="project-row reveal reveal-delay-3">
-          <span class="project-row-num">04</span>
-          <div>
-            <div class="project-row-name">Flight Info System</div>
-            <div class="project-row-sub">Java Swing &middot; OOP &middot; filtering and sorting &middot; real-time status display</div>
-          </div>
-          <span class="project-row-type">Desktop</span>
-          <span class="project-row-action">Screens coming</span>
-        </div>
-
-        <a href="https://ankeet13.github.io/DigitalClock/" target="_blank" rel="noopener" class="project-row reveal reveal-delay-4">
-          <span class="project-row-num">05</span>
-          <div>
-            <div class="project-row-name">Digital Clock</div>
-            <div class="project-row-sub">Vanilla JS &middot; CSS animations &middot; real-time display</div>
-          </div>
-          <span class="project-row-type">Frontend</span>
-          <span class="project-row-action">Live demo &rarr;</span>
-        </a>
-
-        <div class="project-row reveal reveal-delay-5">
-          <span class="project-row-num">06</span>
-          <div>
-            <div class="project-row-name">Automation &amp; Trading Bots</div>
-            <div class="project-row-sub">Python &middot; Pandas &middot; Binance/Bybit &middot; modular backtesting &middot; risk controls</div>
-          </div>
-          <span class="project-row-type">Automation</span>
-          <span class="project-row-action">R&amp;D / private</span>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <div class="container footer-inner">
-      <span class="footer-copy">&copy; <span id="year"></span> Sudip Ojha</span>
-      <div class="footer-links">
-        <a href="https://linkedin.com/in/sudip-ojha" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="mailto:ankee.ankeet13@gmail.com">Email</a>
-        <a href="services.html">Services</a>
+      <div class="footer__bottom">
+        <span>© <span id="year"></span> Sudip Ojha — all systems operational</span>
+        <span>Sydney, Australia · <span class="js-sydney-time">--:--:--</span> local</span>
       </div>
     </div>
   </footer>
